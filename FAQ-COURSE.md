@@ -19,7 +19,7 @@ For specific FAQ on PACMAN see [here](../AI23-DOC.git/FAQ-PACMAN.md).
   - [Why do you use many platforms (EdStem, Canvas, GitHub, email, GH Classroom, Google, etc.) instead of just Canvas as other courses?](#why-do-you-use-many-platforms-edstem-canvas-github-email-gh-classroom-google-etc-instead-of-just-canvas-as-other-courses)
 - [DISCUSSION FORUM \& FORUM ETIQUETTE](#discussion-forum--forum-etiquette)
 - [LECTORIALS \& TUTORIALS](#lectorials--tutorials)
-  - [I have a timetable clash. There are no space available. Classes full." What should I do?](#i-have-a-timetable-clash-there-are-no-space-available-classes-full-what-should-i-do)
+  - [I have a timetable clash. There are no space available. Classes full. What should I do?](#i-have-a-timetable-clash-there-are-no-space-available-classes-full-what-should-i-do)
   - [Do we have lectures? What is a lectorial?](#do-we-have-lectures-what-is-a-lectorial)
   - [Can I attend in-person lectorials/tutorials remotely?](#can-i-attend-in-person-lectorialstutorials-remotely)
   - [When are lecture slides made available?](#when-are-lecture-slides-made-available)
@@ -70,13 +70,17 @@ However, if what you are after is technical support with the course, then you sh
 
 ## Attendance: do I need to attend lectorials and tutorials?
 
-From this semester, RMIT has committed to in-person teaching on campus. So, the course will NOT run anymore online or in hybrid mode, as it did in previous years. This means that attendance is expected and is even required for some assessments.
+The short answer is: _No_. Is it probably a very good idea to attend them? _Yes_
 
-So, while a minimum attendance standard is not compulsory, **non-attendance may seriously jeopardise the chances of success in this course**. Non-attendance at an assessment, such as the class exercise challenges at tutorials or lectures, will result in failure of that assessment. Make sure you attend ALL lectures and ALL tutorials.
+While a minimum attendance standard is not compulsory, **non-attendance may seriously jeopardise the chances of success in this course**. Non-attendance at in-person assessments (e.g., Exercise Challenges or marked class quizzes), will result in failure of that assessment (no replacements). So, we strongly suggest to attend ALL lectures and ALL tutorials to maximise the chances of success in the course.
+
+There are also other good reasons to attend in-person teaching sessions, besides just "passing" the course. Studying at uni is a privilege that very few of us have, and a unique aspect of it is the possibility to be taught interactively, on the spot, by uni academics, who are also scientists in the field. Also very important is the ability of interacting with other fellow students who are in "the same learning boat". All this makes uni unique and different from watching videos or learning by yourself, so not attending kind of gives up what is probably the main feature of uni study. For many students, that will be the only time in their lives to be in a Uni environment, so it is important not to miss out I think :-)
 
 In the last couple of years, during COVID times, we have experienced first-hand how limited the online experience is and how much better, fruitful, and enjoyable is in-person learning. So, I hope this will motivate us all to make that extra effort to "be there". It not only enhance your own experience, but also that of others. So, "being there" is contributing to the learning of everyone.
 
-Note that the course will NOT run in hybrid mode. This means that you should _not_ expect that what happens face-to-face (in-person) will have an online replacement, be online streaming, recording, replacement sessions, etc. From Semester 2, 2023, courses are expected to move to the classic in-person on campus style. This does not mean there will be no online presence, sure there will be (e.g., forum, GitHub), but as additional and complementary resources, not as replacements or interchange.
+Note that, from this semester, RMIT is committed to _in-person teaching on campus_. So, the course will NOT run online or in hybrid mode anymore, as it did in previous years due to COVID. This means that you should _not_ expect that what happens face-to-face (in-person) will have an "online replacement" (be online streaming, recording, replacement sessions, etc.) This does not mean there will be no online presence, sure there will be (e.g., forum, GitHub), but as additional and complementary resources, not as replacements or interchange.
+
+So, hope to see you in the room, interacting with teachers and fellow students!
 
 ## Is there any mentoring program for this course?
 
@@ -194,7 +198,7 @@ Please see dedicated [Forum FAQ & Etiquette](https://docs.google.com/document/d/
 
 # LECTORIALS & TUTORIALS
 
-## I have a timetable clash. There are no space available. Classes full." What should I do?
+## I have a timetable clash. There are no space available. Classes full. What should I do?
 
 _If you encounter timetable clashes or no seats available, it is important that you get them resolved before classes start each semester._
 
