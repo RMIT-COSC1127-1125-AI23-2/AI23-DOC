@@ -84,6 +84,8 @@ So, hope to see you in the room, interacting with teachers and fellow students!
 
 ## Is there any mentoring program for this course?
 
+**Update July 17, 2023**: _"As there is no mentor has been recruited for your course Artificial Intelligence COSC1127 this semester, we regret to inform you that we are unable to fulfill your request."_
+
 It seems RMIT is organising mentorship for this course, but they have not confirmed me that 100%. When I learn more I will let you know.
 
 ## Course Survey Experience: what? why?
