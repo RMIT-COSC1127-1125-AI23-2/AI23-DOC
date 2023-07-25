@@ -54,7 +54,7 @@ As any FAQ page, this page is always "under construction". As we realize that so
   - [My solution works manually for `tinaMaze` but the authograder fails. The state format used in the autogarders tests are different from the Pacman game's in `tinaMaze`. What happens here?](#my-solution-works-manually-for-tinamaze-but-the-authograder-fails-the-state-format-used-in-the-autogarders-tests-are-different-from-the-pacman-games-in-tinamaze-what-happens-here)
   - [In Q7, can I take a heuristic from elsewhere (e.g., Google) and implement it?](#in-q7-can-i-take-a-heuristic-from-elsewhere-eg-google-and-implement-it)
   - [In Q7, what timeout will be used? How do I know what timeout should I use?](#in-q7-what-timeout-will-be-used-how-do-i-know-what-timeout-should-i-use)
-    - [Are we allowed to use `mazeDistance` (or a modified version) when calculating our heuristic?](#are-we-allowed-to-use-mazedistance-or-a-modified-version-when-calculating-our-heuristic)
+  - [Are we allowed to use `mazeDistance` (or a modified version) when calculating our heuristic?](#are-we-allowed-to-use-mazedistance-or-a-modified-version-when-calculating-our-heuristic)
 
 -------------------------
 
@@ -623,7 +623,7 @@ If you want to *store* information to be reused in other calls to the
 This could be a deal breaker and could move your heuristic performance from 30secs to 1sec.
 
 
-### Are we allowed to use `mazeDistance` (or a modified version) when calculating our heuristic?
+## Are we allowed to use `mazeDistance` (or a modified version) when calculating our heuristic?
 
 Yes, you certainly can, which is why it says the following in the comments:
 
