@@ -46,6 +46,15 @@ As any FAQ page, this page is always "under construction". As we realize that so
   - [Can I use catch all exceptions in my code, or exceptions from the infrastructure?](#can-i-use-catch-all-exceptions-in-my-code-or-exceptions-from-the-infrastructure)
 - [Project 0](#project-0)
   - [Do we have to handle edge cases? For example, for the `shopSmart` function, what should we do if a fruit is _not_ present in one of the shops?](#do-we-have-to-handle-edge-cases-for-example-for-the-shopsmart-function-what-should-we-do-if-a-fruit-is-not-present-in-one-of-the-shops)
+- [Project 1](#project-1)
+  - [Do we need to do all the "`*** YOUR CODE HERE ***`" method?](#do-we-need-to-do-all-the--your-code-here--method)
+  - [Can I import standard libraries?](#can-i-import-standard-libraries)
+  - [What actions should I return in the search algorithms?](#what-actions-should-i-return-in-the-search-algorithms)
+  - [What counts as an expansion? I am getting too many expansions....](#what-counts-as-an-expansion-i-am-getting-too-many-expansions)
+  - [My solution works manually for `tinaMaze` but the authograder fails. The state format used in the autogarders tests are different from the Pacman game's in `tinaMaze`. What happens here?](#my-solution-works-manually-for-tinamaze-but-the-authograder-fails-the-state-format-used-in-the-autogarders-tests-are-different-from-the-pacman-games-in-tinamaze-what-happens-here)
+  - [In Q7, can I take a heuristic from elsewhere (e.g., Google) and implement it?](#in-q7-can-i-take-a-heuristic-from-elsewhere-eg-google-and-implement-it)
+  - [In Q7, what timeout will be used? How do I know what timeout should I use?](#in-q7-what-timeout-will-be-used-how-do-i-know-what-timeout-should-i-use)
+    - [Are we allowed to use `mazeDistance` (or a modified version) when calculating our heuristic?](#are-we-allowed-to-use-mazedistance-or-a-modified-version-when-calculating-our-heuristic)
 
 -------------------------
 
@@ -502,3 +511,123 @@ Note that, for all future projects you should consider edge cases carefully and 
 
 One could import the function from Q2 and use that instead, but the function signatures then won't match, so one needs to create a wrapper in Q2 anyway, and it all gets a bit messy. Fundamentally if you use `getPriceOfOrder`, it will give wrong results for any shops which don't stock all your fruit, but that does seem to be the intended solution.
 
+
+-----------------
+# Project 1
+
+## Do we need to do all the "`*** YOUR CODE HERE ***`" method?
+
+Not really. Just those parts that are relevant for the questions in the assessment.
+
+Some parts are extension that may not be used in a particular edition of the course. For example, in the 2022 edition you don't have to complete `capsuleProblemHeuristic`.
+
+## Can I import standard libraries?
+
+Yes. For example, importing `sys` to access `sys.maxsize` would be totally fine. Do not import libraries, though, that you wouldn't expect any Python install to include.
+
+## What actions should I return in the search algorithms?
+
+Check the actions in this class in games.py
+
+```python
+class Directions:
+NORTH = 'North'
+SOUTH = 'South'
+EAST = 'East'
+WEST = 'West'
+STOP = 'Stop'
+```
+
+## What counts as an expansion? I am getting too many expansions....
+
+Basically, every time you call `problem.getSuccessors(.)`.
+
+(It is not popping out from the queue, as we don't have access to that part of your code!)
+
+So be careful not using that function for more than what is needed. When debugging, be careful, you may introduce [Heisenbug](https://en.wikipedia.org/wiki/Heisenbug)! :-)
+
+One can implement the various search algorithms (e.g., DFS) doing one call to `getSuccessor()` per loop/node, as in the pseudo-code (e.g., book or slides).
+
+## My solution works manually for `tinaMaze` but the authograder fails. The state format used in the autogarders tests are different from the Pacman game's in `tinaMaze`. What happens here?
+
+Indeed, the test cases often have atomic states instead of `(x,y)` coordinates, but this should not affect your code at all. From the algorithms perspective, a state is (just) a "state", regardless of the representation. The autograder often checks corner cases which are not tested by the standard 
+mazes, which may be why you see it failing (despite your manual cases working).
+
+## In Q7, can I take a heuristic from elsewhere (e.g., Google) and implement it?
+
+The objective of the exercise is NOT to program in Python a solution that somebody else has invented/created. The fact is that we are not testing Python here or even coding skills per se alone. We are learning how to come up/create good heuristics ourselves, by thinking about the domain at hand and the way search works.
+
+What we are interested in assessing for this question is your ability to understand what heuristics are and design them yourself. As a result, while searching online for heuristics **in general** would be fine (but we doubt useful here if you read the book), searching for a heuristic, even at a conceptual level, for this particular problem is definitively **not** OK.
+
+Think about what some relaxations of the problem are, and how you might design a heuristic from those. There are a number of quite simple heuristics that do quite well, as well as some more sophisticated ones.
+
+## In Q7, what timeout will be used? How do I know what timeout should I use?
+
+The key point to understand here is *why do we use heuristics after all?* We use heuristics to guide the search---informed search---so that it runs _faster_. 
+
+OK, but _faster thank what?_ Well, at least faster than if we do not use a heuristic, right? So, we can set the heuristic to just be `0` (by just doing `return 0` at the top of function `foodHeuristic`) and see how much it would take by running:
+
+```shell
+$ python pacman.py -l trickySearch -p AStarFoodSearchAgent -q 
+
+Path found with total cost of 60 in 1.9 seconds
+Search nodes expanded: 16688
+Pacman emerges victorious! Score: 570
+Average Score: 570.0
+Scores:        570.0
+Win Rate:      1/1 (1.00)
+Record:        Win
+```
+
+So it takes 1.9 seconds when running the agent with an "empty" heuristic. What happens when we plugged our heuristic? 
+
+
+```shell
+$ python pacman.py -l trickySearch -p AStarFoodSearchAgent -q 
+
+Path found with total cost of 60 in 0.2 seconds
+Search nodes expanded: 255
+Pacman emerges victorious! Score: 570
+Average Score: 570.0
+Scores:        570.0
+Win Rate:      1/1 (1.00)
+Record:        Win
+```
+
+As one can see the time was cut down to just 0.2 seconds (10% of the time when no heuristic is used!) and the number of nodes expanded to just 255. Note this is a very powerful heuristic (it expanded only 255 nodes!), and we are not expecting this to get full marks. There are very fast implementations taking 0.5secs and expanding ~1500 nodes, way below the 7000 mark!
+
+So, the question is not just whether the heuristic reduces the number of expansions, but also, ultimately, the search time.
+
+When solving this question consider:
+
+1. How good is your A* implementation?
+2. How good is your heuristic?
+
+Basically you are after a good enough A* implementation and a heuristic that _improves_ A* when used without heuristic.
+
+Remember that a heuristic is useful, only if gives benefit over not using it; otherwise what is the point of it? If your heuristic expands very few nodes, BUT it takes a lot of time to compute, then the heuristic will not be beneficial after all. Consider, what would be the very best heuristic you can use (but not useful)? ;-)
+
+We will put the deadline timeout relative to **our** non-heuristic version (i.e., `h=0`) and you can do that in your machine to make sure you are at least playing the game seriously against `h=0`.  😉 
+
+Finally, take note of the comment in the source code:
+
+```
+If you want to *store* information to be reused in other calls to the
+    heuristic, there is a dictionary called problem.heuristicInfo that you can
+    use. For example, if you only want to count the walls once and store that
+    value, try: problem.heuristicInfo['wallCount'] = problem.walls.count()
+    Subsequent calls to this heuristic can access
+    problem.heuristicInfo['wallCount']
+```
+
+This could be a deal breaker and could move your heuristic performance from 30secs to 1sec.
+
+
+### Are we allowed to use `mazeDistance` (or a modified version) when calculating our heuristic?
+
+Yes, you certainly can, which is why it says the following in the comments:
+
+
+> This might be a useful helper function for your ApproximateSearchAgent.
+
+Be careful though - it is easy to imagine that if you call a function to do something, it is 'free', but if you look at the code in that function, you will soon realise that this function may take a lot of time itself. :-)
