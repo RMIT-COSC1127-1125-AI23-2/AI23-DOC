@@ -36,6 +36,7 @@ As any FAQ page, this page is always "under construction". As we realize that so
   - [Can I use `problem._visited`?](#can-i-use-problem_visited)
   - [I get "`_tkinter.TclError: no display name and no $DISPLAY environment variable`" error when running in WSL or ssh](#i-get-_tkintertclerror-no-display-name-and-no-display-environment-variable-error-when-running-in-wsl-or-ssh)
   - [Cannot run Pacman due to problems with Tkinter: "`ImportError: No module named Tkinter`"](#cannot-run-pacman-due-to-problems-with-tkinter-importerror-no-module-named-tkinter)
+  - [I get a blank screen when running Pacman on my Mac, why?](#i-get-a-blank-screen-when-running-pacman-on-my-mac-why)
   - [Error module 'cgi' has no attribute 'escape' when running autograder.pt](#error-module-cgi-has-no-attribute-escape-when-running-autograderpt)
   - [Can't fit the Pacman window in my screen, can I resize it?](#cant-fit-the-pacman-window-in-my-screen-can-i-resize-it)
   - [Cannot compile Metric-FF in MacOS](#cannot-compile-metric-ff-in-macos)
@@ -332,7 +333,6 @@ If you use Windows, then you need an X server running and set your ssh client (e
 
 Said so, for development, we strongly suggest to clone your repo locally on your machine and work there (e.g., using PyCharm, Visual Code Studio, or even ECLIPSE).
 
-
 ## How do I setup a system in Windows with Python 3.6?
 
 Although we will assume you are able to install and get Python running in your machine, there are plenty of videos on that on the web. For example:
@@ -357,10 +357,9 @@ Also, if you are using Windows hooked up into Linux (WSL or WSL2), you need to p
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 ```
 
-
 Then install the [VCXSRV](https://sourceforge.net/projects/vcxsrv/files/vcxsrv/) X-server. Run xLaunch and "Disable access control". And add a new inbound rule in Windows Firewall for TCP Port 6000.  Use the ssh command as above.
 
-As you can see, all this can be too complicated for no benefit. For development, **we strongly suggest** to clone your repo locally on your machine and work there (e.g., using PyCharm, Visual Code Studio).
+As you can see, all these can be too complicated for no benefit. For development, **we strongly suggest** to clone your repo locally on your machine and work there (e.g., using PyCharm, Visual Code Studio).
 
 ## Cannot run Pacman due to problems with Tkinter: "`ImportError: No module named Tkinter`"
 
@@ -383,6 +382,14 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>
 [eXXXXX@foo~]$
 ```
+
+## I get a blank screen when running Pacman on my Mac, why?
+
+If you get something like this on your Mac:
+
+![Blank screen on Mac](img/tkinter-mac-python2.jpg)
+
+This is due to using Python 2.7. Any Mac users, make sure to run `python3 pacman.py` (or otherwise ensure you are using Python 3, not 2.x).
 
 ## Error module 'cgi' has no attribute 'escape' when running autograder.pt
 
