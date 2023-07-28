@@ -253,13 +253,13 @@ Said so, when the slides have useful information (e.g., news or specific technic
 
 ## Will there be recordings?
 
-Lectorials are meant to be recorded automatically and show in Canvas afterwards under **Echo360**. However, there are two important caveats to this.
+Lectorials are meant to be automatically recorded under **Echo360**. However, there are two important caveats to this.
 
-First, note this is out of my control and in the past there have been numerous issues with recording, including missing recordings, muted recordings, noisy or very low audio, no video, etc. Because of this and the fact that being in the room, face-to-face, is probably the main benefit of taking a Uni course rather than online videos, I strongly suggest students who are able to, to make the effort and attend sessions in person (unless of course those who are overseas and cannot make it, of course!)
+First, note this recording is out of my control and in the past there have been numerous issues with recordings, including missing recordings, muted recordings, noisy or very low audio, no video, truncated videos, missing projection, etc. Because of this and the fact that being in the room face-to-face is probably the main benefit of taking a Uni course rather than online videos, I strongly suggest students to _make the effort and attend sessions in person_.
 
-Second, often the recordings will be delayed significantly (even weeks), as they need to be processed before released, even more when there could be private conversations due to the interactive nature of the session.
+Second, most often recordings will be _delayed_ (significantly, even weeks), as I need to check, process, and edit them before full released. Among other things, recordings have the potential of "catching" private conversations that need to be trimmed. Because this is very time consuming, I often do this inspection and editing in batches, so expect recordings with delay.
 
-Remembe recordings are NOT meant to be replacements of the in-person session, but rather review material for later. So I would strongly suggest not counting on them and joining the show in person! Let's take full advantage and be thankful we can get together, now that COVID is over. :-)
+The key here is that **recordings are NOT meant to be replacements of the in-person session**, but rather review material for later. So, I would strongly suggest not counting on them and encourage everyone to join the show in person! Also, showing up, being there, even if not asking, is a way to contributing to the learning environment: to your learning and the learning of everyone around. So, let's take full advantage and be thankful that we can get together again, now that COVID is over. :-)
 
 ## When are we getting the tute solutions and why are we not getting them all quickly?
 
