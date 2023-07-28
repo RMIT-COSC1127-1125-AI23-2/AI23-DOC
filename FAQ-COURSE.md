@@ -146,22 +146,24 @@ Yes, no need to worry. This is just a Canvas "hack" for cross-listed courses. We
 
 ## I enrolled late in the course, can you explain me about X, Y, and Z about the course? What should I do now?
 
-First of all, I assume you have discussed your late enrollment with your Program Manager. This is important.
+First of all, I assume you have discussed your late enrollment with your Program Manager. This is important. We assume students have been diligent beforehand and are fully ready and enrolled at least in Week 0, if not before.
 
 Enrolling late means that you have lost content and information about the course, and possibly assessments. This is fine as long as you got the OK of your Program Manager and you take responsibility of your late entering to the course, _without shifting the burden to the teaching staff_.
 
-Think about it: joining a course in week 2 or 3 is like getting 15' late to a meeting with lots of people: you do it with care, trying not to bother others, and assuming _full responsibility_ for having arrived "late". Would you stop the meeting and ask: _"can you please quickly tell me what you have been discussing so far?"_ Surely not.. ;-)
+Think about it: joining a course in week 2 or 3 is like getting 15' late to a meeting with lots of people: you do it with care, trying not to bother others, and assuming _full responsibility_ for having arrived "late". Would you stop the meeting and ask: _"can you please tell me what you have been discussing so far?"_ Surely not... ;-)
 
 So this means that:
 
 1. The teaching staff will not go over the course logistics and information on a per-student basis when the student has joined the course late (and lost the first week of information and course overview).
-   - This means you would have to gather the information provided in the first week by yourself, by reading the Canvas's course page, parsing all relevant forum posts, watching the videos and recordings. You would probably benefit from talking to other fellow students who are in sync with the course.
-   - Please, do not ask the teaching staff to go over the course details _again_, but if you have to, please do it _after_ you have processed everything and do it _in person_ in lectorials, tutorials, consultation time. This would show that you really care and are putting a legitimate effort to catch-up (and hence the teaching staff will be more sympathetic). :-)
+   - This means you would have to gather the information provided in the first weeks by yourself, by reading the online course pages/information, parsing all relevant forum posts, watching the videos and recordings. You would probably benefit from talking to other fellow students who are in sync with the course.
+   - Please, do not ask the teaching staff to go over the course details _again_, but if you have to, please do it _after_ you have processed everything and do it _in person_ in lectorials, tutorials, consultation time. This would show that you really care and put a legitimate effort to catch-up (and hence the teaching staff will be more sympathetic). :-)
 2. You will have to catch-up with the technical content of the course.  This is an intense course and there is significant reading allocated to each week, starting from week 1 itself. This means you would have to put significant effort to sync with the course.
-   - Entering in week 2 should be doable with effort; after that would be very challenging and risk.
+   - Entering in week 2+ should be doable with effort; after that would be very challenging and risk.
 3. You are not entitled to any extension or re-do of assessments run or distributed already when you enrolled.
 
-In summary, the course is very intense, even for those starting on time, and every week matters. I am OK if you join late after discussing with your PM, as long as you take full responsibility of such late start. Of course I am also OK with students contacting me before formally enrolled and while they are waiting for administrative process to conclude; this will allow students to stay in sync with the course until all paper-work is sorted out.
+In summary, the course is very intense, even for those starting on time, and every week matters. I am OK if you join late after discussing with your PM, as long as you **take full responsibility** of such late start. Of course I am also OK with students contacting me before formally enrolled and while they are waiting for administrative process to conclude; this will allow students to stay in sync with the course until all paper-work is sorted out.
+
+Hope this is clear and all the best in the course!
 
 ## I have a question about the course, but it is not here!
 
