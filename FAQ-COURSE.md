@@ -148,7 +148,7 @@ Yes, no need to worry. This is just a Canvas "hack" for cross-listed courses. We
 
 First of all, I assume you have discussed your late enrollment with your Program Manager. This is important. We assume students have been diligent beforehand and are fully ready and enrolled at least in Week 0, if not before.
 
-Enrolling late means that you have lost content and information about the course, and possibly assessments. This is fine as long as you got the OK of your Program Manager and you take responsibility of your late entering to the course, _without shifting the burden to the teaching staff_.
+Enrolling late means that you have lost content and information about the course, and possibly assessments. This is fine as long as you **got the OK of your Program Manager** and you take **full responsibility** of your late entering to the course, _without shifting the burden to the teaching staff_.
 
 Think about it: joining a course in week 2 or 3 is like getting 15' late to a meeting with lots of people: you do it with care, trying not to bother others, and assuming _full responsibility_ for having arrived "late". Would you stop the meeting and ask: _"can you please tell me what you have been discussing so far?"_ Surely not... ;-)
 
