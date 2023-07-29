@@ -6,7 +6,8 @@ Overall, you want to generate a meaningful git history that provides quality evi
 
 These include:
 
-* _Configure your git authorship_: set your name and email address correctly so that your commits have correct authorship information. Read about this [here](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/troubleshooting-commits/why-are-my-commits-linked-to-the-wrong-user).
+* _Configure your git authorship_: set your name and email address correctly so that your commits have correct authorship information. Please access the commit history in your remote repo, and check your commits are linked to your GH username: your username in each commit should be "clickable"; if you cannot click on the user of a commit, then that user is wrong configured and you must fix it. 
+  * Read about this issue and how to correct it if wrong [here](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/troubleshooting-commits/why-are-my-commits-linked-to-the-wrong-user).
 * _Commit early, commit often (but meaningfully!):_ single or few commits with all the solution or big chunks of it is not good practice.
 * _Use atomic logically-separate commits:_ avoid commits about many things or dummy commits; each commit should be about one interesting thing. You want to create a meaningful git history, that allows you to easily revert a past change. For that, you also don't want to flood your git history with tons of padding commits.
 * _Use meaningful commit messages:_ as comments in your code, a commit message should clearly and succinctly summarize what the commit is about. Messages like "fix", "work", "commit", "changes" are poor and do not help us understand what was done.
