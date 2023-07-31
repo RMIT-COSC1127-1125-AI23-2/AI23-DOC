@@ -45,6 +45,7 @@ As any FAQ page, this page is always "under construction". As we realize that so
   - [How can I debug my system?](#how-can-i-debug-my-system)
   - [Can I change the pacman infrastructure at run-time?](#can-i-change-the-pacman-infrastructure-at-run-time)
   - [Can I use catch all exceptions in my code, or exceptions from the infrastructure?](#can-i-use-catch-all-exceptions-in-my-code-or-exceptions-from-the-infrastructure)
+  - [Should we remove this line `util.raiseNotDefined()` before starting our code or not? What does it do?](#should-we-remove-this-line-utilraisenotdefined-before-starting-our-code-or-not-what-does-it-do)
 - [Project 0](#project-0)
   - [Do we have to handle edge cases? For example, for the `shopSmart` function, what should we do if a fruit is _not_ present in one of the shops?](#do-we-have-to-handle-edge-cases-for-example-for-the-shopsmart-function-what-should-we-do-if-a-fruit-is-not-present-in-one-of-the-shops)
 - [Project 1](#project-1)
@@ -498,6 +499,10 @@ You can see there that I am catching the specific `ImportError` exception (not a
 For the same reason, you should never catch `Exception` or `BaseException`, or any exception raised by the Pacman infrastructure itself (as the ones used for tracking timeouts). This would amount to tampering with the Pacman infrastructure, which is pretty bad (check question above on that).
 
 Most solutions won't require catching any exception, but if you happen to do/need so, you must catch specific exceptions and not the ones of the Pacman infrastructure.
+
+## Should we remove this line `util.raiseNotDefined()` before starting our code or not? What does it do?
+
+Yes, you should remove it - to figure out what it does I encourage you to look up its definition in `util.py` ;-)
 
 -----------------
 # Project 0
