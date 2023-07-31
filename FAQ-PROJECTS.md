@@ -56,6 +56,7 @@ As any FAQ page, this page is always "under construction". As we realize that so
   - [In Q7, can I take a heuristic from elsewhere (e.g., Google) and implement it?](#in-q7-can-i-take-a-heuristic-from-elsewhere-eg-google-and-implement-it)
   - [In Q7, what timeout will be used? How do I know what timeout should I use?](#in-q7-what-timeout-will-be-used-how-do-i-know-what-timeout-should-i-use)
   - [Are we allowed to use `mazeDistance` (or a modified version) when calculating our heuristic?](#are-we-allowed-to-use-mazedistance-or-a-modified-version-when-calculating-our-heuristic)
+  - [Can we create a new BFS for the part 5? My implementation doesn't fit with my new state representation!](#can-we-create-a-new-bfs-for-the-part-5-my-implementation-doesnt-fit-with-my-new-state-representation)
 
 -------------------------
 
@@ -629,7 +630,6 @@ If you want to *store* information to be reused in other calls to the
 
 This could be a deal breaker and could move your heuristic performance from 30secs to 1sec.
 
-
 ## Are we allowed to use `mazeDistance` (or a modified version) when calculating our heuristic?
 
 Yes, you certainly can, which is why it says the following in the comments:
@@ -638,3 +638,15 @@ Yes, you certainly can, which is why it says the following in the comments:
 > This might be a useful helper function for your ApproximateSearchAgent.
 
 Be careful though - it is easy to imagine that if you call a function to do something, it is 'free', but if you look at the code in that function, you will soon realise that this function may take a lot of time itself. :-)
+
+## Can we create a new BFS for the part 5? My implementation doesn't fit with my new state representation!
+
+This is a good question. The answer is _no_ - you cannot and should not need to create a new BFS.
+
+Search algorithms should be entirely generic and only interact through the interface defined at the top of `search.py` by the generic `SearchProblem` class.
+
+Remember the key tasks in designing a search-based solution:
+
+![sas](img/p1-search_repr.png)
+
+This issue is about the first task: _representation_.
