@@ -23,6 +23,7 @@ As any FAQ page, this page is always "under construction". As we realize that so
   - [I get `Permission denied (publickey).` from GitHub](#i-get-permission-denied-publickey-from-github)
   - [I have committed to the remote repo but I am not listed as a "contributor", why?](#i-have-committed-to-the-remote-repo-but-i-am-not-listed-as-a-contributor-why)
   - [Commits not correctly associated to my GitHub account, why?](#commits-not-correctly-associated-to-my-github-account-why)
+- [I made a bad commit and pushed to repo, how can I undo it?](#i-made-a-bad-commit-and-pushed-to-repo-how-can-i-undo-it)
 - [PYTHON](#python)
   - [What version of Python should I use?](#what-version-of-python-should-i-use)
   - [How do I run Python 3.6 in `coreteachingXX.csit.rmit.edu.au`?](#how-do-i-run-python-36-in-coreteachingxxcsitrmiteduau)
@@ -238,6 +239,19 @@ Read [this GitHub page](https://docs.github.com/en/github/setting-up-and-managin
 ## Commits not correctly associated to my GitHub account, why?
 
 Please [check this](https://docs.github.com/en/github/committing-changes-to-your-project/troubleshooting-commits/why-are-my-commits-linked-to-the-wrong-user) and fix it so we can know the commit was *yous*. Otherwise we may get your contributions wrong and risk getting lower marks or delaying your marking.
+
+# I made a bad commit and pushed to repo, how can I undo it?
+
+You should use `git revert`. That is, if you  pushed your changes and you now want to go back to the previous version, use this (assuming you are working on the `main` branch):
+
+```shell
+$ git revert HEAD~1
+$ git push origin main
+```
+
+This states that you want to revert the changes to `HEAD` by `1` commit (the last commit), make a new commit that undoes those changes, and then push this new commit to the origin branch, in this case the `main` branch. Of course you can imagine how to undo back more than 1 commit, right? ;-)
+
+Read more about `git revert` [here](https://www.atlassian.com/git/tutorials/undoing-changes/git-revert).
 
 ------------------------------
 # PYTHON

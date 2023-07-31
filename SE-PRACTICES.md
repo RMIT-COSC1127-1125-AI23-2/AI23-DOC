@@ -12,6 +12,7 @@ These include:
 * _Use atomic logically-separate commits:_ avoid commits about many things or dummy commits; each commit should be about one interesting thing. You want to create a meaningful git history, that allows you to easily revert a past change. For that, you also don't want to flood your git history with tons of padding commits.
 * _Use meaningful commit messages:_ as comments in your code, a commit message should clearly and succinctly summarize what the commit is about. Messages like "fix", "work", "commit", "changes" are poor and do not help us understand what was done.
 * _Never upload files:_ git should not be used as a storage service. Setup your system to do proper meaningful commits and do not use GitHub's upload button ever.
+* _Never ever force push to repo:_ never do this as it will re-write your repo history and cause serious problems and inteference with our mirroring syste. Instead use `git revert` to undo a commit by creating another comm
 
 Besides proper commit behavior to obtain a clean and meaning history, you should:
 
