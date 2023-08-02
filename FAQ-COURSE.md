@@ -42,6 +42,7 @@ For specific FAQ on PACMAN see [here](../AI23-DOC.git/FAQ-PACMAN.md).
   - [I have a SPC for the THE/EC, how does it work?](#i-have-a-spc-for-the-theec-how-does-it-work)
   - [In a code assignment/project, how do I make sure I do not go against academic integrity?](#in-a-code-assignmentproject-how-do-i-make-sure-i-do-not-go-against-academic-integrity)
   - [Why did I get 57 in the assignment/project if it is 5% of the course?](#why-did-i-get-57-in-the-assignmentproject-if-it-is-5-of-the-course)
+  - [Break-points do not work on `search.py`, why?](#break-points-do-not-work-on-searchpy-why)
 
 # GENERAL
 
@@ -395,3 +396,9 @@ The reason is that doing so provides a **uniform and consistent view of the stud
 To get the final contribution to your course, you then need to _multiply the mark of the assessment by the weight of the assessment_. For example, if you got a 50 in Assignment 1, say, and the assessment was 5% of the course, this means that you have collected 2.5% of that assessment for the course.
 
 BTW, this is just one way of doing it and I am not claiming it must be done like that. This is not really so important in the end, and any student should be able to go from one system (out of 100 or out of the weight contribution) with ease.
+
+## Break-points do not work on `search.py`, why?
+
+You are probably running the debugger from the `autograder.py`. The feedback autograder does some fancy things (e.g, translation to bytecode) that interferes with the debugger. One way around it (reported by an AI'23 student, thanks Thomas!) is to just run the debugger on `pacman.py` instead and running suitable commands via `args` in the debugging `launch.json`.
+
+In fact, this is the best practice because the actual system is `pacman.py`, not the autograder. :-)
