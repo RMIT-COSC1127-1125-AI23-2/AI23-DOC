@@ -23,8 +23,9 @@ For specific FAQ on PACMAN see [here](../AI23-DOC.git/FAQ-PACMAN.md).
   - [Do we have lectures? What is a lectorial?](#do-we-have-lectures-what-is-a-lectorial)
   - [Can I attend in-person lectorials/tutorials remotely?](#can-i-attend-in-person-lectorialstutorials-remotely)
   - [When are lecture slides made available?](#when-are-lecture-slides-made-available)
-  - [Will there be recordings?](#will-there-be-recordings)
+  - [Will there be lectorial recordings?](#will-there-be-lectorial-recordings)
   - [When are we getting the tute solutions and why are we not getting them all quickly?](#when-are-we-getting-the-tute-solutions-and-why-are-we-not-getting-them-all-quickly)
+  - [What about tutes, labs, consultation times? Will they be recorded?](#what-about-tutes-labs-consultation-times-will-they-be-recorded)
   - [Why don't we get the concrete final answer to questions instead of getting a rephrase of questions or a question back?](#why-dont-we-get-the-concrete-final-answer-to-questions-instead-of-getting-a-rephrase-of-questions-or-a-question-back)
   - [I cannot enroll in any tutorial, they are all full. What should I do?](#i-cannot-enroll-in-any-tutorial-they-are-all-full-what-should-i-do)
   - [I cannot attend my tutorial session, can I change to another session?](#i-cannot-attend-my-tutorial-session-can-i-change-to-another-session)
@@ -253,7 +254,7 @@ Slides in a lectorial play a much less important role than what they used to be 
 
 Said so, when the slides have useful information (e.g., news or specific technical points discussed), they will be provided after the session in EdStem.
 
-## Will there be recordings?
+## Will there be lectorial recordings?
 
 Lectorials are meant to be automatically recorded under **Echo360**. However, there are two important caveats to this.
 
@@ -272,6 +273,20 @@ The short answer is that we aim to actively promote **"production-based”** lea
 So, solutions to some of the exercise in tute sheets will be provided **one week after the tute**.  This will give students space to solve tutorial questions _by themselves_. Providing the solutions right away will jeopardize this objective for many cases. It is not useful to have the solution; the key is to _arrive at them_ (or at least give it a try!). Nonetheless, some exercises may be executed in lectorials and attending tutorials you will have a good feeling on how your answers are doing.
 
 In tutorials you can always check with the tutor your solution, provided you show evidence that you have put adequate effort. Again, the idea is not to provide solutions for mere consumption as that decreases the chances of genuine learning.
+
+## What about tutes, labs, consultation times? Will they be recorded?
+
+The short answer is _no_, they will not be recorded.
+
+Tutes, labs, consultation times, are all interactive in nature. So, they will not be recorded, mostly because of three reasons:
+
+1. We want to promote **active contribution** and **participation**.  There is no contribution when one just watches what others have done. To contribute, one needs to "be there".
+2. It has been clear that recordings make some people who **would otherwise attend**, not attend. Bad outcome indeed.
+3. Most importantly, we aim to **remove any potential obstacle** on people talking, asking (even silly questions), making mistakes, answering (even if wrongly), etc. without the feeling that they have been recorded and then watched by many others.
+   * Note this is also one of the main reasons why we use EdStem: it allows _anonymous posts_ and it has been prove that this increases participation a LOT!
+
+This rationale is intended to _promote_ a better learning environment on the whole. Of course, nothing is perfect and, analogous to programming languages, we can only _promote_ a paradigm (but not fully force it!) 😉 
+
 
 ## Why don't we get the concrete final answer to questions instead of getting a rephrase of questions or a question back?
 
