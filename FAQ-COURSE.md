@@ -37,7 +37,7 @@ For specific FAQ on PACMAN see [here](../AI23-DOC.git/FAQ-PACMAN.md).
   - [Can I ask questions on an assignment/assessment in the forum?](#can-i-ask-questions-on-an-assignmentassessment-in-the-forum)
   - [I am very busy with other commitments (work, other subjects, travel, etc.) and may not be able to make the deadline, can I get a 2-3 day extension?](#i-am-very-busy-with-other-commitments-work-other-subjects-travel-etc-and-may-not-be-able-to-make-the-deadline-can-i-get-a-2-3-day-extension)
   - [Can I submit late? What is the penalty?](#can-i-submit-late-what-is-the-penalty)
-  - [What is the policy on Special Consideration?](#what-is-the-policy-on-special-consideration)
+  - [What is the policy on Special Consideration (SPC)?](#what-is-the-policy-on-special-consideration-spc)
   - [I am not available for the Exercise Challenge (EC) or Take Home Exercises (THE), can I take them some other time?](#i-am-not-available-for-the-exercise-challenge-ec-or-take-home-exercises-the-can-i-take-them-some-other-time)
   - [I have a SPC for the THE/EC, how does it work?](#i-have-a-spc-for-the-theec-how-does-it-work)
   - [In a code assignment/project, how do I make sure I do not go against academic integrity?](#in-a-code-assignmentproject-how-do-i-make-sure-i-do-not-go-against-academic-integrity)
@@ -362,15 +362,15 @@ Yes, for assignment projects only (not timed and timetabled assessments), you ca
 
 Please note that late submissions are only allowed to assignments and projects, not for timed and timetabled assessments (e.g., in class quizzes, challenge exercises, or take-home exercises). These must be done during the time-frame allowed and no late submission is permitted.
 
-## What is the policy on Special Consideration?
+## What is the policy on Special Consideration (SPC)?
 
 The dates of all assessments in this course are given well in advance. Plan early your work around your commitments and workload, start on the assessments early, and submit them substantially before the deadline, preferably at least one or two days before. Submitting close to the deadline could be risky and you may fail to submit on time, for example due to loss of Internet, laptop problems, server delays, heavy workload, late enrollment, external commitments, etc
 
-However, if you know you will be unable to complete an assignment due to illness or personal circumstances outside of your control, please contact your lecturer immediately for special consideration. Evidence will be required. In many cases, though, I cannot grant unilateral special considerations and you may need to go through RMIT formal process for [Special Consideration](http://www.rmit.edu.au/students/specialconsideration).
+However, if you know you will be unable to complete an assignment due to illness or personal circumstances outside of your control, please contact your lecturer immediately for special consideration. Evidence will be required. In many cases, though, I cannot grant unilateral special considerations and you may need to go through RMIT formal process for [Special Consideration (SPC)](http://www.rmit.edu.au/students/specialconsideration).
 
 Each request will be considered on an individual basis. If the request is approved, the deadline for the assignment will be extended. If the request is denied and the assessment missed, you will unfortunately receive a 0 for that assessment.
 
-Please note that while no Special Consideration will be granted frivolously, any request received close to the assessment date (or after the date!) will generally not be accepted except in the most extreme circumstances. This is to encourage students to plan days and weeks ahead, and to discourage last minute pleas for help.
+Please note that while no SPC will be granted frivolously, any request received close to the assessment date (or after the date!) will generally not be accepted except in the most extreme circumstances. This is to encourage students to plan days and weeks ahead, and to discourage last minute pleas for help.
 
 ## I am not available for the Exercise Challenge (EC) or Take Home Exercises (THE), can I take them some other time?
 
@@ -382,7 +382,7 @@ We do not run one-to-one specialized tests for students; that would be totally u
 
 ## I have a SPC for the THE/EC, how does it work?
 
-SPC for the Take Home Exercises or Exercise Challegnes will be carried out as an _Equivalent Assessment_ at a later stage, with the instructor on campus. An Equivalent Assessment covers the same content and at the same expectations, but can be done in a different format. The student must make sure they are made themselves available for it. For the THE assessments, it will basically be a set of exercises carried out on pen & paper.
+SPC for the Take Home Exercises or Exercise Challenges will be carried out as an _Equivalent Assessment_ at a later stage, with the instructor on campus. An Equivalent Assessment covers the same content and at the same expectations, but can be done in a different format. The student must make sure they are made themselves available for it. For the THE assessments, it will basically be a set of exercises carried out on pen & paper.
 
 ## In a code assignment/project, how do I make sure I do not go against academic integrity?
 
