@@ -43,6 +43,7 @@ For specific FAQ on PACMAN see [here](../AI23-DOC.git/FAQ-PACMAN.md).
   - [In a code assignment/project, how do I make sure I do not go against academic integrity?](#in-a-code-assignmentproject-how-do-i-make-sure-i-do-not-go-against-academic-integrity)
   - [Why did I get 57 in the assignment/project if it is 5% of the course?](#why-did-i-get-57-in-the-assignmentproject-if-it-is-5-of-the-course)
   - [Break-points do not work on `search.py`, why?](#break-points-do-not-work-on-searchpy-why)
+  - [In the feedback autograder, what does `expanded_states` means?](#in-the-feedback-autograder-what-does-expanded_states-means)
 
 # GENERAL
 
@@ -402,3 +403,8 @@ BTW, this is just one way of doing it and I am not claiming it must be done like
 You are probably running the debugger from the `autograder.py`. The feedback autograder does some fancy things (e.g, translation to bytecode) that interferes with the debugger. One way around it (reported by an AI'23 student, thanks Thomas!) is to just run the debugger on `pacman.py` instead and running suitable commands via `args` in the debugging `launch.json`.
 
 In fact, this is the best practice because the actual system is `pacman.py`, not the autograder. :-)
+
+## In the feedback autograder, what does `expanded_states` means?
+
+Basically, the number of times you have done expansion of nodes, that is, number of calls to `getSuccessors()`` method. Makes sense? :-)
+
