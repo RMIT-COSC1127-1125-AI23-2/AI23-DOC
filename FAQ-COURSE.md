@@ -185,7 +185,7 @@ More broadly, I am on the opinion that it is actually _not_ so good for the stud
 1. First, it is just **impossible and unrealistic in Computer Science**: there are lots of technologies and systems around that are all useful in their own way and that different people use, be Github, Slack, Canvas, Latex, email, Discord, Edstem, Travis, Jira, stack-overflow, Menti, etc.
    * A good CS practicioner should not only be versed on many of them, but also flexible adaptive enough to learn and manage new ones as they are needed or requested (e.g., at work or on an open-source project).
    * As a student itself put it in a feedback: _"I like the fact that our submission is done through GitHub as it provides some industrial sample."_
-2. As an educator, I _personally_ **don't believe in a "McDonald"-type uniform approach to education and learning**, under which everything is in the same place, color, format, size, and taste 😆.  
+2. As an educator, I _personally_ **don't believe in a "McDonald"-type uniform approach to education and learning**, under which everything is in the same place, color, format, size, and taste 😆.
    * While uniformity may provide a sense of "safety" to students, it does not train them to be _flexible_ and _adaptive_. It also does not recognise that there are indeed different teachers and different styles of teaching, like in the real world.
    * So, I do think it is beneficial for students to be exposed to different style of teachers and teaching styles, so they can learn many ways, not just "one way". 😃
 
@@ -262,7 +262,7 @@ Lectorials are meant to be automatically recorded under **Echo360**. However, th
 
 1. **Recordings are out of my control** and in the past there have been numerous issues with recordings, including missing recordings, muted recordings, noisy or very low audio, no video, truncated videos, missing projection, etc. Because of this and the fact that being in the room face-to-face is probably the main benefit of taking a Uni course rather than online videos, I strongly suggest students to _make the effort and attend sessions in person_.
 
-2. **Recordings need to be checked, processed, and edited before full release**. Among other things, recordings have the potential of "catching" private conversations that need to be trimmed. Because this is a very time consuming task (and I have plenty of other course-related things to attend), I often do this inspection and editing in batches, so expect recordings with a significant delay (weeks). 
+2. **Recordings need to be checked, processed, and edited before full release**. Among other things, recordings have the potential of "catching" private conversations that need to be trimmed. Because this is a very time consuming task (and I have plenty of other course-related things to attend), I often do this inspection and editing in batches, so expect recordings with a significant delay (weeks).
 
 The key here is that **recordings are NOT meant to be replacements of the in-person session**, but rather review material for later. So, I would strongly suggest not counting on them and encourage everyone to join the show in person!
 
@@ -287,7 +287,7 @@ Tutes, labs, consultation times, are all interactive in nature. So, they will no
 3. Most importantly, we aim to **remove any potential obstacle** on people talking, asking (even silly questions), making mistakes, answering (even if wrongly), etc. without the feeling that they have been recorded and then watched by many others.
    * Note this is also one of the main reasons why we use EdStem: it allows _anonymous posts_ and it has been prove that this increases participation a LOT!
 
-This rationale is intended to _promote_ a better learning environment on the whole. Of course, nothing is perfect and, analogous to programming languages, we can only _promote_ a paradigm (but not fully force it!) 😉 
+This rationale is intended to _promote_ a better learning environment on the whole. Of course, nothing is perfect and, analogous to programming languages, we can only _promote_ a paradigm (but not fully force it!) 😉
 
 
 ## Why don't we get the concrete final answer to questions instead of getting a rephrase of questions or a question back?
@@ -324,7 +324,7 @@ If more than 10 working days has passed, then check for announcements regarding 
 
 ## I was never asked these questions in an assignment or test, why?
 
-This is correct and one of the objectives of assessments. Basically, we aim at going beyond the lowest level in the [Bloom Hierarchy](https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/) (_remember_ and _understand_) and achieve higher-order levels of learning for applying and creating new solutions. 
+This is correct and one of the objectives of assessments. Basically, we aim at going beyond the lowest level in the [Bloom Hierarchy](https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/) (_remember_ and _understand_) and achieve higher-order levels of learning for applying and creating new solutions.
 
 One important skill---a very important one---is to be able to handle new problems and challenges with the knowledge & problem-solving strategies you gathered earlier. It is not enough to _just_ solve questions that you have seen before. In particular, if you want to excel, you must be able to welcome & handle novel challenges.
 
