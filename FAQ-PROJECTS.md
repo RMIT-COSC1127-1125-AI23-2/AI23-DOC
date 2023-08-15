@@ -53,6 +53,7 @@ As any FAQ page, this page is always "under construction". As we realize that so
   - [Do we need to do all the "`*** YOUR CODE HERE ***`" method?](#do-we-need-to-do-all-the--your-code-here--method)
   - [Can I import standard libraries?](#can-i-import-standard-libraries)
   - [What actions should I return in the search algorithms?](#what-actions-should-i-return-in-the-search-algorithms)
+  - [How can I represent a plan with no actions?](#how-can-i-represent-a-plan-with-no-actions)
   - [What counts as an expansion? I am getting too many expansions....](#what-counts-as-an-expansion-i-am-getting-too-many-expansions)
   - [My solution works manually for `tinaMaze` but the authograder fails. The state format used in the autogarders tests are different from the Pacman game's in `tinaMaze`. What happens here?](#my-solution-works-manually-for-tinamaze-but-the-authograder-fails-the-state-format-used-in-the-autogarders-tests-are-different-from-the-pacman-games-in-tinamaze-what-happens-here)
   - [In Q7, can I take a heuristic from elsewhere (e.g., Google) and implement it?](#in-q7-can-i-take-a-heuristic-from-elsewhere-eg-google-and-implement-it)
@@ -554,16 +555,20 @@ Yes. For example, importing `sys` to access `sys.maxsize` would be totally fine.
 
 ## What actions should I return in the search algorithms?
 
-Check the actions in this class in games.py
+Check the actions in this class in `games.py`
 
 ```python
 class Directions:
-NORTH = 'North'
-SOUTH = 'South'
-EAST = 'East'
-WEST = 'West'
-STOP = 'Stop'
+  NORTH = 'North'
+  SOUTH = 'South'
+  EAST = 'East'
+  WEST = 'West'
+  STOP = 'Stop'
 ```
+
+## How can I represent a plan with no actions?
+
+Either with an empty list or with a list with just action `Stop`.
 
 ## What counts as an expansion? I am getting too many expansions....
 
