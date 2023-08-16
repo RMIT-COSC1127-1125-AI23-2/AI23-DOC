@@ -694,7 +694,6 @@ In fact, this is the best practice because the actual system is `pacman.py`, not
 
 Basically, the number of times you have done expansion of nodes, that is, number of calls to `getSuccessors()`` method. Makes sense? :-)
 
-
 -----------------
 # Project 2
 
@@ -774,4 +773,3 @@ When you run it with graphics, it's just running out of time because it takes a 
 ## When I run the autograder I get the message _"has not SIGALRM"_, why?
 
 That message is fine, you can ignore it. It is mostly a debug message and we will probably remove it for future projects. Thanks!
-
