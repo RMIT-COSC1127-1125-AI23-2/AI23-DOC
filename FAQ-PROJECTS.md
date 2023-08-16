@@ -60,6 +60,14 @@ As any FAQ page, this page is always "under construction". As we realize that so
   - [In Q7, what timeout will be used? How do I know what timeout should I use?](#in-q7-what-timeout-will-be-used-how-do-i-know-what-timeout-should-i-use)
   - [Are we allowed to use `mazeDistance` (or a modified version) when calculating our heuristic?](#are-we-allowed-to-use-mazedistance-or-a-modified-version-when-calculating-our-heuristic)
   - [Can we create a new BFS for the part 5? My implementation doesn't fit with my new state representation!](#can-we-create-a-new-bfs-for-the-part-5-my-implementation-doesnt-fit-with-my-new-state-representation)
+  - [Break-points do not work on `search.py`, why?](#break-points-do-not-work-on-searchpy-why)
+  - [In the feedback autograder, what does `expanded_states` means?](#in-the-feedback-autograder-what-does-expanded_states-means)
+- [Project 2](#project-2)
+  - [Inconsistent depth in minimax project 2, Q2 and careful use of `__init__`](#inconsistent-depth-in-minimax-project-2-q2-and-careful-use-of-__init__)
+  - [Can we apply a "magic number" such as -9999 in our evaluation functions, as part of our logic not simply an arbitrary "return -9999"?](#can-we-apply-a-magic-number-such-as--9999-in-our-evaluation-functions-as-part-of-our-logic-not-simply-an-arbitrary-return--9999)
+  - [In Q4, what does it mean an adversary which chooses amongst their `getLegalActions` uniformly at random?](#in-q4-what-does-it-mean-an-adversary-which-chooses-amongst-their-getlegalactions-uniformly-at-random)
+  - [The resyult of the feedback autograder with graphics and without graphics are very different! My system works without graphics buimes out with graphics and I lose all games, why?](#the-resyult-of-the-feedback-autograder-with-graphics-and-without-graphics-are-very-different-my-system-works-without-graphics-buimes-out-with-graphics-and-i-lose-all-games-why)
+  - [When I run the autograder I get the message _"has not SIGALRM"_, why?](#when-i-run-the-autograder-i-get-the-message-has-not-sigalrm-why)
 
 -------------------------
 
@@ -674,3 +682,96 @@ Remember the key tasks in designing a search-based solution:
 ![sas](img/p1-search_repr.png)
 
 This issue is about the first task: _representation_.
+
+
+## Break-points do not work on `search.py`, why?
+
+You are probably running the debugger from the `autograder.py`. The feedback autograder does some fancy things (e.g, translation to bytecode) that interferes with the debugger. One way around it (reported by an AI'23 student, thanks Thomas!) is to just run the debugger on `pacman.py` instead and running suitable commands via `args` in the debugging `launch.json`.
+
+In fact, this is the best practice because the actual system is `pacman.py`, not the autograder. :-)
+
+## In the feedback autograder, what does `expanded_states` means?
+
+Basically, the number of times you have done expansion of nodes, that is, number of calls to `getSuccessors()`` method. Makes sense? :-)
+
+
+-----------------
+# Project 2
+
+## Inconsistent depth in minimax project 2, Q2 and careful use of `__init__`
+
+So it looks like this issue is due to issues in calling constructors of parent classes (i.e. `__init__`). This can be a bit tricky, so here is the takeaway that is needed for this project:
+
+If you want to add an `__init__` method into any (or all) of `MinimaxAgent`, `AlphaBetaAgent`, or `ExpectimaxAgent`, it should look like this:
+
+```python
+class MinimaxAgent(MultiAgentSearchAgent):
+    def __init__(self, **kwargs):
+    "*** YOUR CODE HERE ***"
+    super().__init__(**kwargs)
+```
+
+This ensures that you aren't interfering with the arguments being passed through to the `MultiAgentSearchAgent` subclass. For anyone who wants to know why you need to do this and what that means, keep reading.
+
+Let's imagine you want to add something to the constructor (i.e. the `__init__` method) of `MinimaxAgent`, for whatever reason. Your first attempt might look like:
+
+```python
+class MinimaxAgent(MultiAgentSearchAgent):
+    def __init__(self):
+    self.foo = 0 # initialise foo
+```
+
+This should fail with the following `error: TypeError: __init__()` got an unexpected keyword argument 'depth'.
+
+Why is that? Well, the test harness is trying to call `__init__()` on `MultiAgentSearchAgent` to pass in the depth (and potentially evalFn) argument. Your new constructor now overwrites the original constructor of `MultiAgentSearchAgent`, and it isn't expecting any arguments, hence the error. What you want to do is call the parent constructor from within your constructor, to make sure that you aren't interfering with the original code. You can try to do so with the `super()` keyword like so:
+
+```python
+class MinimaxAgent(MultiAgentSearchAgent):
+    def __init__(self):
+    self.foo = 0 # initialise foo
+    super().__init__()
+```
+
+But this still gives the same error, as you haven't passed through the arguments. You can pass them through manually like so:
+
+```python
+class MinimaxAgent(MultiAgentSearchAgent):
+    def __init__(self, evalFn = 'scoreEvaluationFunction', depth = '2'):
+    self.foo = 0 # initialise foo
+    super().__init__(evalFn, depth)
+```
+
+However this runs into a number of problems:
+
+If you have multiple parent classes (either directly or indirectly), you don't know which arguments to pass.
+It duplicates code (including default arguments), now a change to one class needs to be made in many places.
+It requires you to know exactly what the parent class is doing, which is not ideal. 
+
+This is where `**kwargs` comes in. For our purposes we can think of `**kwargs` as a dictionary that store an unlimited number of keyword arguments to a function, where we don't have to know what they are. This allows you to pass then on to other functions from parent classes, but you can also access them like any other dictionary:
+
+```python
+class MinimaxAgent(MultiAgentSearchAgent):
+    def __init__(self, **kwargs):
+    self.foo = 0 # initialise foo
+    print("Minimax depth: ", kwargs['depth'])
+    super().__init__(**kwargs)
+```
+
+More details about super can be found [here](https://stackoverflow.com/questions/2399307/how-to-invoke-the-super-constructor-in-python) (although it lacks discussion of arguments), and details about kwargs [here](https://stackoverflow.com/questions/3394835/use-of-args-and-kwargs).
+
+## Can we apply a "magic number" such as -9999 in our evaluation functions, as part of our logic not simply an arbitrary "return -9999"?
+
+You would not be marked down for using a number like that - however if you really want a very large number, you might consider using `math.inf` instead, or even `float('inf')`.
+
+## In Q4, what does it mean an adversary which chooses amongst their `getLegalActions` uniformly at random?
+
+All it means is that the other players in the game are acting randomly, with no bias towards any action: all legal actions have the same chance of being executed. For example, if player 2 has three legal moves: left, down and up, then it will choose left with 33% chances, down with 33% chances and up with 33% chances.
+
+## The resyult of the feedback autograder with graphics and without graphics are very different! My system works without graphics buimes out with graphics and I lose all games, why?
+
+When you run it with graphics, it's just running out of time because it takes a while for the games to display. No need to worry, we will be grading _without_ graphics so it will not timeout for that reason (if you just run `python autograder.py` without specifying a question, it runs without graphics as default). The graphics are just there so you can see the behaviour of your agents more clearly.
+
+## When I run the autograder I get the message _"has not SIGALRM"_, why?
+
+That message is fine, you can ignore it. It is mostly a debug message and we will probably remove it for future projects. Thanks!
+
