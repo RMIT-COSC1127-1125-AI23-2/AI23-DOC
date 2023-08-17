@@ -766,7 +766,7 @@ You would not be marked down for using a number like that - however if you reall
 
 All it means is that the other players in the game are acting randomly, with no bias towards any action: all legal actions have the same chance of being executed. For example, if player 2 has three legal moves: left, down and up, then it will choose left with 33% chances, down with 33% chances and up with 33% chances.
 
-## The resyult of the feedback autograder with graphics and without graphics are very different! My system works without graphics buimes out with graphics and I lose all games, why?
+## The resyult of the feedback autograder with graphics and without graphics are very different! My system works without graphics but times out with graphics and I lose all games, why?
 
 When you run it with graphics, it's just running out of time because it takes a while for the games to display. No need to worry, we will be grading _without_ graphics so it will not timeout for that reason (if you just run `python autograder.py` without specifying a question, it runs without graphics as default). The graphics are just there so you can see the behaviour of your agents more clearly.
 
