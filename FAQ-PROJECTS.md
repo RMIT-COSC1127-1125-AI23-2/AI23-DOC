@@ -67,8 +67,9 @@ As any FAQ page, this page is always "under construction". As we realize that so
   - [Inconsistent depth in minimax project 2, Q2 and careful use of `__init__`](#inconsistent-depth-in-minimax-project-2-q2-and-careful-use-of-__init__)
   - [Can we apply a "magic number" such as -9999 in our evaluation functions, as part of our logic not simply an arbitrary "return -9999"?](#can-we-apply-a-magic-number-such-as--9999-in-our-evaluation-functions-as-part-of-our-logic-not-simply-an-arbitrary-return--9999)
   - [In Q4, what does it mean an adversary which chooses amongst their `getLegalActions` uniformly at random?](#in-q4-what-does-it-mean-an-adversary-which-chooses-amongst-their-getlegalactions-uniformly-at-random)
-  - [The resyult of the feedback autograder with graphics and without graphics are very different! My system works without graphics buimes out with graphics and I lose all games, why?](#the-resyult-of-the-feedback-autograder-with-graphics-and-without-graphics-are-very-different-my-system-works-without-graphics-buimes-out-with-graphics-and-i-lose-all-games-why)
+  - [The resyult of the feedback autograder with graphics and without graphics are very different! My system works without graphics but times out with graphics and I lose all games, why?](#the-resyult-of-the-feedback-autograder-with-graphics-and-without-graphics-are-very-different-my-system-works-without-graphics-but-times-out-with-graphics-and-i-lose-all-games-why)
   - [When I run the autograder I get the message _"has not SIGALRM"_, why?](#when-i-run-the-autograder-i-get-the-message-has-not-sigalrm-why)
+  - [What is a reasonable time for Question 5?](#what-is-a-reasonable-time-for-question-5)
 
 -------------------------
 
@@ -335,8 +336,6 @@ We are still investigating this issue as it seems to work well in our set-up. Th
 The best way is to use [`math.inf`](https://docs.python.org/3/library/math.html#math.inf). Python can handle arbitrarily large numbers, and so `math.inf` is both correct and also meaningful for the reader.
 
 **Note:** avoid using `sys.maxsize`; you can check what happens if you do `sys.maxsize < sys.maxsize*2`. :-)
-
-
 
 ------------------------------
 # GENERAL PACMAN
@@ -782,3 +781,11 @@ When you run it with graphics, it's just running out of time because it takes a 
 ## When I run the autograder I get the message _"has not SIGALRM"_, why?
 
 That message is fine, you can ignore it. It is mostly a debug message and we will probably remove it for future projects. Thanks!
+
+## What is a reasonable time for Question 5?
+
+It is hard to give precise times, as that will depend on what hardware you are running on.
+
+On our desktops, our solution runs the entire `Q5` from start to finish  in ~5 seconds (`python autograder.py -q q5 --no-graphics`). 
+
+For reference, if we just `return 0`, it takes ~3 seconds just to run the games themselves.
