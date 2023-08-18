@@ -24,6 +24,7 @@ As any FAQ page, this page is always "under construction". As we realize that so
   - [I have committed to the remote repo but I am not listed as a "contributor", why?](#i-have-committed-to-the-remote-repo-but-i-am-not-listed-as-a-contributor-why)
   - [Commits not correctly associated to my GitHub account, why?](#commits-not-correctly-associated-to-my-github-account-why)
   - [I made a bad commit and pushed to repo, how can I undo it?](#i-made-a-bad-commit-and-pushed-to-repo-how-can-i-undo-it)
+  - [How do I compare the speed of my desktop/laptop with that from the cluster being used for marking?](#how-do-i-compare-the-speed-of-my-desktoplaptop-with-that-from-the-cluster-being-used-for-marking)
 - [PYTHON](#python)
   - [What version of Python should I use?](#what-version-of-python-should-i-use)
   - [How do I run Python 3.6 in `coreteachingXX.csit.rmit.edu.au`?](#how-do-i-run-python-36-in-coreteachingxxcsitrmiteduau)
@@ -263,6 +264,44 @@ $ git push origin main
 This states that you want to revert the changes to `HEAD` by `1` commit (the last commit), make a new commit that undoes those changes, and then push this new commit to the origin branch, in this case the `main` branch. Of course you can imagine how to undo back more than 1 commit, right? ;-)
 
 Read more about `git revert` [here](https://www.atlassian.com/git/tutorials/undoing-changes/git-revert).
+
+## How do I compare the speed of my desktop/laptop with that from the cluster being used for marking?
+
+In general the cluster is not very fast, hence it won't be a surprise if your laptop runs faster.
+
+You can compare the relative speed of your machine against the cluster using [python-speed](https://github.com/vprelovac/python-speed).
+
+This is what I get in the cluster:
+
+```shell
+❯ python bench.py
+python-speed v1.3 using python v3.10.6
+string/mem: 2181.89 ms
+pi calc/math: 2979.85 ms
+regex: 3508.85 ms
+fibonnaci/stack:  2791.22 ms
+multiprocess: 1468.98 ms
+
+total:  12930.8 ms (lower is better)
+```
+
+And this is what I get from my laptop:
+
+```shell
+❯ python bench.py
+python-speed v1.3 using python v3.10.12
+string/mem: 1044.85 ms
+pi calc/math: 2012.68 ms
+regex: 1722.82 ms
+fibonnaci/stack:  995.85 ms
+multiprocess: 484.14 ms
+
+total:  6260.34 ms (lower is better)
+```
+
+As you can see my laptop is ~2x faster than the cluster machines.
+
+So, _how fast is your laptop_? 
 
 ------------------------------
 # PYTHON
