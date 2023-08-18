@@ -301,7 +301,7 @@ total:  6260.34 ms (lower is better)
 
 As you can see my laptop is ~2x faster than the cluster machines.
 
-So, _how fast is your laptop_? 
+So, _how fast is your laptop_?
 
 ------------------------------
 # PYTHON
@@ -637,7 +637,7 @@ One can implement the various search algorithms (e.g., DFS) doing one call to `g
 
 ## My solution works manually for `tinaMaze` but the authograder fails. The state format used in the autogarders tests are different from the Pacman game's in `tinaMaze`. What happens here?
 
-Indeed, the test cases often have atomic states instead of `(x,y)` coordinates, but this should not affect your code at all. From the algorithms perspective, a state is (just) a "state", regardless of the representation. The autograder often checks corner cases which are not tested by the standard 
+Indeed, the test cases often have atomic states instead of `(x,y)` coordinates, but this should not affect your code at all. From the algorithms perspective, a state is (just) a "state", regardless of the representation. The autograder often checks corner cases which are not tested by the standard
 mazes, which may be why you see it failing (despite your manual cases working).
 
 ## In Q7, can I take a heuristic from elsewhere (e.g., Google) and implement it?
@@ -650,12 +650,12 @@ Think about what some relaxations of the problem are, and how you might design a
 
 ## In Q7, what timeout will be used? How do I know what timeout should I use?
 
-The key point to understand here is *why do we use heuristics after all?* We use heuristics to guide the search---informed search---so that it runs _faster_. 
+The key point to understand here is *why do we use heuristics after all?* We use heuristics to guide the search---informed search---so that it runs _faster_.
 
 OK, but _faster thank what?_ Well, at least faster than if we do not use a heuristic, right? So, we can set the heuristic to just be `0` (by just doing `return 0` at the top of function `foodHeuristic`) and see how much it would take by running:
 
 ```shell
-$ python pacman.py -l trickySearch -p AStarFoodSearchAgent -q 
+$ python pacman.py -l trickySearch -p AStarFoodSearchAgent -q
 
 Path found with total cost of 60 in 1.9 seconds
 Search nodes expanded: 16688
@@ -666,11 +666,11 @@ Win Rate:      1/1 (1.00)
 Record:        Win
 ```
 
-So it takes 1.9 seconds when running the agent with an "empty" heuristic. What happens when we plugged our heuristic? 
+So it takes 1.9 seconds when running the agent with an "empty" heuristic. What happens when we plugged our heuristic?
 
 
 ```shell
-$ python pacman.py -l trickySearch -p AStarFoodSearchAgent -q 
+$ python pacman.py -l trickySearch -p AStarFoodSearchAgent -q
 
 Path found with total cost of 60 in 0.2 seconds
 Search nodes expanded: 255
@@ -694,7 +694,7 @@ Basically you are after a good enough A* implementation and a heuristic that _im
 
 Remember that a heuristic is useful, only if gives benefit over not using it; otherwise what is the point of it? If your heuristic expands very few nodes, BUT it takes a lot of time to compute, then the heuristic will not be beneficial after all. Consider, what would be the very best heuristic you can use (but not useful)? ;-)
 
-We will put the deadline timeout relative to **our** non-heuristic version (i.e., `h=0`) and you can do that in your machine to make sure you are at least playing the game seriously against `h=0`.  😉 
+We will put the deadline timeout relative to **our** non-heuristic version (i.e., `h=0`) and you can do that in your machine to make sure you are at least playing the game seriously against `h=0`.  😉
 
 Finally, take note of the comment in the source code:
 
@@ -791,7 +791,7 @@ However this runs into a number of problems:
 
 If you have multiple parent classes (either directly or indirectly), you don't know which arguments to pass.
 It duplicates code (including default arguments), now a change to one class needs to be made in many places.
-It requires you to know exactly what the parent class is doing, which is not ideal. 
+It requires you to know exactly what the parent class is doing, which is not ideal.
 
 This is where `**kwargs` comes in. For our purposes we can think of `**kwargs` as a dictionary that store an unlimited number of keyword arguments to a function, where we don't have to know what they are. This allows you to pass then on to other functions from parent classes, but you can also access them like any other dictionary:
 
@@ -823,8 +823,50 @@ That message is fine, you can ignore it. It is mostly a debug message and we wil
 
 ## What is a reasonable time for Question 5?
 
-It is hard to give precise times, as that will depend on what hardware you are running on.
+It is hard to give precise times, as that will depend on what hardware you are running on. See [question above](#how-do-i-compare-the-speed-of-my-desktoplaptop-with-that-from-the-cluster-being-used-for-marking) regarding how to compare the relative speed of your machine with that of the cluster machines used for marking.
 
-On our desktops, our solution runs the entire `Q5` from start to finish  in ~5 seconds (`python autograder.py -q q5 --no-graphics`). 
+On our own desktop, our solution runs the entire `Q5` from start to finish  in ~5 seconds (`python autograder.py -q q5 --no-graphics`). For reference, if we just `return 0`, it takes ~3 seconds just to run the games themselves.
 
-For reference, if we just `return 0`, it takes ~3 seconds just to run the games themselves.
+Now here is how it runs our solution in the cluster:
+
+```shell
+$ python autograder.py -q q5 --no-graphics
+
+Question q5
+===========
+Playing 10 games with seed 0 and timeouts set to 120 seconds.
+Pacman emerges victorious! Score: 1359
+Pacman emerges victorious! Score: 1161
+Pacman emerges victorious! Score: 1338
+Pacman emerges victorious! Score: 1283
+Pacman emerges victorious! Score: 1340
+Pacman emerges victorious! Score: 1346
+Pacman emerges victorious! Score: 1151
+Pacman emerges victorious! Score: 1277
+Pacman emerges victorious! Score: 1311
+Pacman emerges victorious! Score: 1191
+Average Score: 1275.7
+Scores:        1359.0, 1161.0, 1338.0, 1283.0, 1340.0, 1346.0, 1151.0, 1277.0, 1311.0, 1191.0
+Win Rate:      10/10 (1.00)
+Record:        Win, Win, Win, Win, Win, Win, Win, Win, Win, Win
+*** PASS: p2-multiagent-grader/marking-packs/02.AI22/q5/grade-agent.test (6 of 6 points)
+***     1275.7 average score (2 of 2 points)
+***         Grading scheme:
+***          < 500:  0 points
+***         >= 500:  1 points
+***         >= 1000:  2 points
+***     10 games not timed out (1 of 1 points)
+***         Grading scheme:
+***          < 0:  fail
+***         >= 0:  0 points
+***         >= 10:  1 points
+***     10 wins (3 of 3 points)
+***         Grading scheme:
+***          < 1:  fail
+***         >= 1:  1 points
+***         >= 5:  2 points
+***         >= 10:  3 points
+=====> Time taken for question:  7.0834801197052
+```
+
+As you can see, our solution takes 7seconds in the cluster.
