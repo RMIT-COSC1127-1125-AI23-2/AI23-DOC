@@ -71,6 +71,7 @@ As any FAQ page, this page is always "under construction". As we realize that so
   - [The resyult of the feedback autograder with graphics and without graphics are very different! My system works without graphics but times out with graphics and I lose all games, why?](#the-resyult-of-the-feedback-autograder-with-graphics-and-without-graphics-are-very-different-my-system-works-without-graphics-but-times-out-with-graphics-and-i-lose-all-games-why)
   - [When I run the autograder I get the message _"has not SIGALRM"_, why?](#when-i-run-the-autograder-i-get-the-message-has-not-sigalrm-why)
   - [What is a reasonable time for Question 5?](#what-is-a-reasonable-time-for-question-5)
+  - [Is there a way to run the evaluation function in Question 5 in harder setting or with more ghosts?](#is-there-a-way-to-run-the-evaluation-function-in-question-5-in-harder-setting-or-with-more-ghosts)
 
 -------------------------
 
@@ -869,4 +870,18 @@ Record:        Win, Win, Win, Win, Win, Win, Win, Win, Win, Win
 =====> Time taken for question:  7.0834801197052
 ```
 
-As you can see, our solution takes 7seconds in the cluster.
+As you can see, our solution takes 7 seconds in the cluster.
+
+## Is there a way to run the evaluation function in Question 5 in harder setting or with more ghosts?
+
+Try:
+
+```shell
+$ python .\pacman.py -p ExpectimaxAgent -a evalFn=better
+```
+
+or even harder!:
+
+```shell
+$ python .\pacman.py -p ExpectimaxAgent -a evalFn=better -l originalClassic
+```
