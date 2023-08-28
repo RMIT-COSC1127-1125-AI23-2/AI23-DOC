@@ -72,7 +72,7 @@ As any FAQ page, this page is always "under construction". As we realize that so
   - [When I run the autograder I get the message _"has not SIGALRM"_, why?](#when-i-run-the-autograder-i-get-the-message-has-not-sigalrm-why)
   - [What is a reasonable time for Question 5?](#what-is-a-reasonable-time-for-question-5)
   - [Is there a way to run the evaluation function in Question 5 in harder setting or with more ghosts?](#is-there-a-way-to-run-the-evaluation-function-in-question-5-in-harder-setting-or-with-more-ghosts)
-  - [Project 3](#project-3)
+- [Project 3](#project-3)
     - [What is "vanilla" Prolog?](#what-is-vanilla-prolog)
   - [Can I use predicate `X`?](#can-i-use-predicate-x)
   - [Why there are restrictions on the language used?](#why-there-are-restrictions-on-the-language-used)
@@ -735,7 +735,6 @@ Remember the key tasks in designing a search-based solution:
 
 This issue is about the first task: _representation_.
 
-
 ## Break-points do not work on `search.py`, why?
 
 You are probably running the debugger from the `autograder.py`. The feedback autograder does some fancy things (e.g, translation to bytecode) that interferes with the debugger. One way around it (reported by an AI'23 student, thanks Thomas!) is to just run the debugger on `pacman.py` instead and running suitable commands via `args` in the debugging `launch.json`.
@@ -890,7 +889,7 @@ or even harder!:
 $ python .\pacman.py -p ExpectimaxAgent -a evalFn=better -l originalClassic
 ```
 
-## Project 3
+# Project 3
 
 ### What is "vanilla" Prolog?
 
