@@ -68,10 +68,14 @@ As any FAQ page, this page is always "under construction". As we realize that so
   - [Inconsistent depth in minimax project 2, Q2 and careful use of `__init__`](#inconsistent-depth-in-minimax-project-2-q2-and-careful-use-of-__init__)
   - [Can we apply a "magic number" such as -9999 in our evaluation functions, as part of our logic not simply an arbitrary "return -9999"?](#can-we-apply-a-magic-number-such-as--9999-in-our-evaluation-functions-as-part-of-our-logic-not-simply-an-arbitrary-return--9999)
   - [In Q4, what does it mean an adversary which chooses amongst their `getLegalActions` uniformly at random?](#in-q4-what-does-it-mean-an-adversary-which-chooses-amongst-their-getlegalactions-uniformly-at-random)
-  - [The resyult of the feedback autograder with graphics and without graphics are very different! My system works without graphics but times out with graphics and I lose all games, why?](#the-resyult-of-the-feedback-autograder-with-graphics-and-without-graphics-are-very-different-my-system-works-without-graphics-but-times-out-with-graphics-and-i-lose-all-games-why)
+  - [The results of the feedback autograder with graphics and without graphics are very different! My system works without graphics but times out with graphics and I lose all games, why?](#the-results-of-the-feedback-autograder-with-graphics-and-without-graphics-are-very-different-my-system-works-without-graphics-but-times-out-with-graphics-and-i-lose-all-games-why)
   - [When I run the autograder I get the message _"has not SIGALRM"_, why?](#when-i-run-the-autograder-i-get-the-message-has-not-sigalrm-why)
   - [What is a reasonable time for Question 5?](#what-is-a-reasonable-time-for-question-5)
   - [Is there a way to run the evaluation function in Question 5 in harder setting or with more ghosts?](#is-there-a-way-to-run-the-evaluation-function-in-question-5-in-harder-setting-or-with-more-ghosts)
+  - [Project 3](#project-3)
+    - [What is "vanilla" Prolog?](#what-is-vanilla-prolog)
+  - [Can I use predicate `X`?](#can-i-use-predicate-x)
+  - [Why there are restrictions on the language used?](#why-there-are-restrictions-on-the-language-used)
 
 -------------------------
 
@@ -814,7 +818,7 @@ You would not be marked down for using a number like that - however if you reall
 
 All it means is that the other players in the game are acting randomly, with no bias towards any action: all legal actions have the same chance of being executed. For example, if player 2 has three legal moves: left, down and up, then it will choose left with 33% chances, down with 33% chances and up with 33% chances.
 
-## The resyult of the feedback autograder with graphics and without graphics are very different! My system works without graphics but times out with graphics and I lose all games, why?
+## The results of the feedback autograder with graphics and without graphics are very different! My system works without graphics but times out with graphics and I lose all games, why?
 
 When you run it with graphics, it's just running out of time because it takes a while for the games to display. No need to worry, we will be grading _without_ graphics so it will not timeout for that reason (if you just run `python autograder.py` without specifying a question, it runs without graphics as default). The graphics are just there so you can see the behaviour of your agents more clearly.
 
@@ -885,3 +889,40 @@ or even harder!:
 ```shell
 $ python .\pacman.py -p ExpectimaxAgent -a evalFn=better -l originalClassic
 ```
+
+## Project 3
+
+### What is "vanilla" Prolog?
+
+[Vanilla software](https://en.wikipedia.org/wiki/Vanilla_software) refers to software that have _not_ been customized or modified from their original form. Thus we mean "plain" Prolog, the original Prolog without advanced predicates or implementation specific ones.
+
+The spirit of this restriction is to restrict yourself to predicates which are simply defining logical rules which are then used by Prolog's internal backwards chaining inference engine. This is as much as we want you to learn and the content which you are familiar with from tutorials (Prolog is more or less just doing resolution proofs automatically, like you do on paper!). Some predicates do 'extra-logical' work, that go beyond this basic inference, and those are the ones we want you to avoid.
+
+In practice it is very hard for you to tell which predicates are 'vanilla' and which aren't without extraordinary research on your end, which is why we have given you lists of predicates which we specifically allow, and predicates which we specifically don't allow. After you work a bit with Prolog, you will most often know if a predicate is advanced or not.
+
+Said so, if you want to use a predicate which is not mentioned in the spec in either direction, post it on the forums and we will let you know. Also look at next question.
+
+## Can I use predicate `X`?
+
+We have listed in the spec several predicates and family of predicates that you may and may not use.
+
+Other predicates that were asked in the forum that **you are allowed** to use are:
+
+- `flatten/1` and any predicate in the [`library(list)`](https://www.swi-prolog.org/pldoc/man?section=lists).
+- `maplist` predicates from [`library(maplist)`](https://www.swi-prolog.org/search?for=maplist).
+
+Examples of predicates that you are not allowed to use:
+
+- Any predicate in any other library not listed above. For example, you may not use predicates in library [`pairs`](https://www.swi-prolog.org/pldoc/man?section=pairs) or [`record`](https://www.swi-prolog.org/pldoc/man?section=record), to name just two.
+- Any "[find all solution](https://www.swi-prolog.org/pldoc/man?section=allsolutions)" predicate.
+
+I will be updating this list as new enquires come up in the forum, but basically anything that seems not basic is not allowed.
+
+## Why there are restrictions on the language used?
+
+The reason behind the restriction is twofold:
+
+1. The aim of the exercise is not to get solutions to the actual problems. We have them already. The aim is for you to learn a bit how to solve problems via Declarative Programming. Allowing very powerful predicates or predicates that break the paradigm defeat this propose. This is the same reason as why you did A* from scratch if there are LOTS of libraries implementing it already: _the aim is to support your learning, not having the solutions_.
+2. Appealing to advanced predicates will increase the chances of you getting a wrong solution. This is because one has to be very proficient when using some advanced predicates, and have a lot of experience using them.
+
+Overall, we just want you to have an exposure to the core of Logic Programming. If you are interested and want more, there are plenty opportunities to go beyond.. :-)
