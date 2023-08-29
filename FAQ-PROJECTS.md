@@ -907,7 +907,7 @@ We have listed in the spec several predicates and family of predicates that you 
 
 Other predicates that were asked in the forum that **you are allowed** to use are:
 
-- `flatten/1` and any predicate in the [`library(list)`](https://www.swi-prolog.org/pldoc/man?section=lists).
+- `flatten/2` and any predicate in the [`library(list)`](https://www.swi-prolog.org/pldoc/man?section=lists).
 - `maplist` predicates from [`library(maplist)`](https://www.swi-prolog.org/search?for=maplist).
 
 Examples of predicates that you are not allowed to use:
