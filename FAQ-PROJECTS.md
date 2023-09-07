@@ -909,13 +909,15 @@ We have listed in the spec several predicates and family of predicates that you 
 
 Other predicates that were asked in the forum that **you are allowed** to use are:
 
-- `flatten/1` and any predicate in the [`library(list)`](https://www.swi-prolog.org/pldoc/man?section=lists).
-- `maplist` predicates from [`library(apply)`](https://www.swi-prolog.org/search?for=maplist). You may not use other predicates in that library, just `maplist`.
+- Any predicate in [`library(list)`](https://www.swi-prolog.org/pldoc/man?section=lists), such as `flatten/1`.
+- `maplist` predicates from [`library(apply)`](https://www.swi-prolog.org/search?for=maplist). You may not use other predicates in that library, just `maplist`. :-)
+- `once/1` predicate and cut `!`, though they are not needed and they are risky and can introduce bugs that are difficult to debug.
 
 Examples of predicates that you are not allowed to use:
 
 - Any predicate in any other library not listed above. For example, you may not use predicates in library [`pairs`](https://www.swi-prolog.org/pldoc/man?section=pairs) or [`record`](https://www.swi-prolog.org/pldoc/man?section=record), to name just two.
 - Any "[find all solution](https://www.swi-prolog.org/pldoc/man?section=allsolutions)" predicate.
+- `call/1`.
 
 I will be updating this list as new enquires come up in the forum, but basically anything that seems not basic is not allowed.
 
