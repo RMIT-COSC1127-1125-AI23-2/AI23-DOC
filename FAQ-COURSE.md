@@ -40,6 +40,8 @@ For specific FAQ on PACMAN see [here](../AI23-DOC.git/FAQ-PACMAN.md).
   - [What is the policy on Special Consideration (SPC)?](#what-is-the-policy-on-special-consideration-spc)
   - [I am not available for the Exercise Challenge (EC) or Take Home Exercises (THE), can I take them some other time?](#i-am-not-available-for-the-exercise-challenge-ec-or-take-home-exercises-the-can-i-take-them-some-other-time)
   - [I have a SPC for the THE/EC, how does it work?](#i-have-a-spc-for-the-theec-how-does-it-work)
+  - [The room for the time-based and timetabled assessment is not comfortable; can we get a larger room?](#the-room-for-the-time-based-and-timetabled-assessment-is-not-comfortable-can-we-get-a-larger-room)
+  - [Why is THE/EC are not fully done on paper or done online at home?](#why-is-theec-are-not-fully-done-on-paper-or-done-online-at-home)
   - [In a code assignment/project, how do I make sure I do not go against academic integrity?](#in-a-code-assignmentproject-how-do-i-make-sure-i-do-not-go-against-academic-integrity)
   - [Why did I get 57 in the assignment/project if it is 5% of the course?](#why-did-i-get-57-in-the-assignmentproject-if-it-is-5-of-the-course)
 
@@ -352,7 +354,7 @@ We expect students enrolled in the course to _have arranged all their other comm
 
 Also, we note that the difficulty of each assessment has been planned to be achievable within the time-frame, so claims about the difficulty of the task will not be entertained wrt extensions. Pushing one deadline for many students will not only complicate the execution of the course, but will put students in a more difficult situation for upcoming (more demanding) assessments.
 
-Finally, because of the nature of project assessments and the quick release of results, any SPC will probably be in the form of an **Equivalent Assessment**, that is, another _ assessment later on that will assess the same content but itotally different way. In most cases this will involve a pre-arranged in-person 2hrs closed-book assessment with the instructor (e.g., a set of exercises to complete).
+Finally, because of the nature of project assessments and the quick release of results, any SPC will probably be in the form of an **Equivalent Assessment**, that is, another _ assessment later on that will assess the same content but possibly in a different way. In most cases this will involve a pre-arranged in-person 1-2hrs closed-book assessment with the instructor (e.g., a set of exercises to complete).
 
 ## Can I submit late? What is the penalty?
 
@@ -381,6 +383,20 @@ We do not run one-to-one specialized tests for students; that would be totally u
 ## I have a SPC for the THE/EC, how does it work?
 
 SPC for the Take Home Exercises or Exercise Challenges will be carried out as an _Equivalent Assessment_ at a later stage, with the instructor on campus. An Equivalent Assessment covers the same content and at the same expectations, but can be done in a different format. The student must make sure they are made themselves available for it. For the THE assessments, it will basically be a set of exercises carried out on pen & paper.
+
+## The room for the time-based and timetabled assessment is not comfortable; can we get a larger room?
+
+I was already able to book one of the largest rooms available at RMIT. Initially we were given an even smaller. While possibly not ideal or perfect, the room and seats are reasonable. Note that centrally organised assessments are not run anymore and academics are asked to organised it all by themselves (room, paper, set-up, invigilation, collection, etc.) so this is the best we could do. I hope you could appreciate this is far from a trivial task for 250+ courses.
+
+## Why is THE/EC are not fully done on paper or done online at home?
+
+In a nutshell, no assessment is perfect AND all they all have resource and trade-offs implications. It not uncommon that students are unaware of these.
+
+For example, programming projects of the sort we have may not be able to test higher-order problem solving skills and they are weak in robustly guaranteeing integrity. In turn, timed-based assessments are not able to assess ability to build complex solutions that require extended period of times (e.g., non-trivial software solutions). Paper-based assessments require significant manual marking resourcing for large classes, and have longer turn-around. Answer-sheet based assessments may not be able to assess complex problems and will therefore rely on quite specific targeted exercises/problems. Oral examinations can very precisely assess knowledge and skills for each individual, but requires significant resourcing and critical judgment from the evaluator.
+
+Because of all the tread-offs, and based on the experience over many years, we designed a mix of assessments _within the resources available_ that include both _practical offline work_ (via several projects) as well as _in-person targeted technical challenges_. We strongly believe the set-up is comprehensive, engaging, and fair, though we will always recognise that no assessment is perfect and we have been adapting or assessments based on experience and changes in context (particularly resourcing). _We are also open to constructive suggestions for consideration_ (it is best always if they have been thought in the context of trade-offs and resourcing implications, of course). In fact, we usually gauge students' perspective in each assessment. While there are definitively other possible frameworks, they all have to deal with trade-offs: there is no free lunch.
+
+We hope this provides a bit more context and happy to hear. :-)
 
 ## In a code assignment/project, how do I make sure I do not go against academic integrity?
 
