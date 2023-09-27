@@ -962,9 +962,3 @@ false.
 ```
 
 For more details check documentation page [AllOutput](https://www.swi-prolog.org/FAQ/AllOutput.html).
-
-
-
-
-
-
