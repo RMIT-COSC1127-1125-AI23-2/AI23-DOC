@@ -76,6 +76,7 @@ As any FAQ page, this page is always "under construction". As we realize that so
     - [What is "vanilla" Prolog?](#what-is-vanilla-prolog)
   - [Can I use predicate `X`?](#can-i-use-predicate-x)
   - [Why there are restrictions on the language used?](#why-there-are-restrictions-on-the-language-used)
+  - [Prolog only shows me part of the terms, the rest shows as `...`. Can I make it to print all the answer?](#prolog-only-shows-me-part-of-the-terms-the-rest-shows-as--can-i-make-it-to-print-all-the-answer)
 
 -------------------------
 
@@ -929,3 +930,41 @@ The reason behind the restriction is twofold:
 2. Appealing to advanced predicates will increase the chances of you getting a wrong solution. This is because one has to be very proficient when using some advanced predicates, and have a lot of experience using them.
 
 Overall, we just want you to have an exposure to the core of Logic Programming. If you are interested and want more, there are plenty opportunities to go beyond.. :-)
+
+## Prolog only shows me part of the terms, the rest shows as `...`. Can I make it to print all the answer?
+
+Yes!
+
+The toplevel interface as well as the tracer will abbreviate long complex terms, so you will see things like this:
+
+```prolog
+?- blue_print(item7, A).
+A = complex(item7, [base(item0), complex(item4, [base(item0), base(item1), base(item2), base(item3)]), complex(item5, [base(item0), base(item1), base(item2), base(...)])])
+```
+
+One way to interactively instruct SWI to show full terms is to press key `w` (write), and from now on SWI will print the full solution (even if it involves printing pages!). You can use `p` to return to the compact reporting.
+
+To change the default behavior change flag `answer_write_options` via `set_prolog_flag/2`. For example to disable abbreviation fully and print arguments with spaces:
+
+```prolog
+?- set_prolog_flag(answer_write_options,
+                   [ quoted(true),
+                     portray(true),
+                     spacing(next_argument)
+                   ]).
+
+?- current_prolog_flag(answer_write_options, X).
+X = [quoted(true), portray(true), spacing(next_argument)].
+
+?- blue_print(item7, A).
+A = complex(item7, [base(item0), complex(item4, [base(item0), base(item1), base(item2), base(item3)]), complex(item5, [base(item0), base(item1), base(item2), base(item3)])]) ;
+false.
+```
+
+For more details check documentation page [AllOutput](https://www.swi-prolog.org/FAQ/AllOutput.html).
+
+
+
+
+
+
