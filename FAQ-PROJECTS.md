@@ -77,7 +77,10 @@ As any FAQ page, this page is always "under construction". As we realize that so
   - [Can I use predicate `X`?](#can-i-use-predicate-x)
   - [Why there are restrictions on the language used?](#why-there-are-restrictions-on-the-language-used)
   - [Prolog only shows me part of the terms, the rest shows as `...`. Can I make it to print all the answer?](#prolog-only-shows-me-part-of-the-terms-the-rest-shows-as--can-i-make-it-to-print-all-the-answer)
-
+- [Project 4](#project-4)
+    - [What are the frequency counts in Q-learning?](#what-are-the-frequency-counts-in-q-learning)
+    - [How precisely does noise effect the transition probabilities in Q2 and Q3?](#how-precisely-does-noise-effect-the-transition-probabilities-in-q2-and-q3)
+    - [What is 'living reward' in Q3?](#what-is-living-reward-in-q3)
 -------------------------
 
 # GENERAL
@@ -894,7 +897,7 @@ $ python .\pacman.py -p ExpectimaxAgent -a evalFn=better -l originalClassic
 
 # Project 3
 
-### What is "vanilla" Prolog?
+## What is "vanilla" Prolog?
 
 [Vanilla software](https://en.wikipedia.org/wiki/Vanilla_software) refers to software that have _not_ been customized or modified from their original form. Thus we mean "plain" Prolog, the original Prolog without advanced predicates or implementation specific ones.
 
@@ -962,3 +965,18 @@ false.
 ```
 
 For more details check documentation page [AllOutput](https://www.swi-prolog.org/FAQ/AllOutput.html).
+
+# Project 4
+
+## What are the frequency counts in Q-learning?
+In the textbook Q-learning-agent pseudocode, there is a potentially confusing line:
+$Q[s,a] \leftarrow$ Q[s,a] + \alpha(N_{sa}[s,a])(r + \gamma \max_{a'} Q[s',a'] - Q[s,a])$
+In particular, many students are confused as to why \alpha, the learning rate, is being multiplied by $N_{sa}[s,a]$, the count of times that the agent has taken this action in this state.
+
+In fact, this is not what the textbook is saying. $\alpha(N_{sa}[s,a])$ should not be read as $\alpha\cdot N_{sa}[s,a]$. \alpha in this case is actually a function which takes N_{sa}[s,a] as an argument, so $\alpha(N_{sa}[s,a])$ is a single number. Interested students are referred to section 23.2.3 and page 702 (section 19.6.4) to learn more about why \alpha may be a function instead of a constant.
+
+## How precisely does noise effect the transition probabilities in Q2 and Q3?
+The spec says "Noise refers to how often an agent ends up in an unintended successor state when they perform an action", but does not give more details than that. You can (and are encouraged) to look in the code to see what happens with noise, but to be precise, a noise of $x$ means that there is a $1-x$ probability that the agent takes the intended action (which we will refer to as moving forwards), an $x/2$ probability the agent instead moves left, a $x/2$ probability the agent instead moves right, and a $0$ probability the agent moves backwards (or in any other non-adjacent square). 
+
+## What is 'living reward' in Q3?
+The living reward parameter is briefly explained at the end of the MDPs section of the spec above Question 1. It is the reward given to the agent for 'staying alive' that is a reward given at every step where the agent does not reach a terminal state.
