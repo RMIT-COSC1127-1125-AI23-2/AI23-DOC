@@ -16,10 +16,6 @@ The automarker will produce a YAML file describing the outcome of each single te
     - [Redundancy](#redundancy)
     - [Soundness](#soundness)
   - [Overall score/marks](#overall-scoremarks)
-  - [Non-standard tests](#non-standard-tests)
-    - [Custom tests](#custom-tests)
-    - [Bonus tests](#bonus-tests)
-    - [Penalty tests](#penalty-tests)
   - [Report](#report)
 
 ## Test cases
@@ -36,7 +32,7 @@ Each test set is associated a number of _marks_, all test sets in the project su
 
 ## Grading dimensions
 
-For Prolog, each standard single test case takes the form of a query (we also have various non-standard tests, to be described below). The expected answer is the expected results of the query. The query results can be either a boolean value (if no variables are involved in the query), or one or more sets of bindings for the free variables in the query (which we will refer to as a solution). For all queries, we check three properties: _completeness_, _redundancy_, and _soundness_.
+For Prolog, each standard single test case takes the form of a query. The expected answer is the expected results of the query. The query results can be either a boolean value (if no variables are involved in the query), or one or more sets of bindings for the free variables in the query (which we will refer to as a solution). For all queries, we check three properties: _completeness_, _redundancy_, and _soundness_.
 
 ### Completeness
 
@@ -108,45 +104,6 @@ Test N: [P/T] - Final points collected
 ```
 where `N` is the ID of the test case, `P` is the number of points received by the submission, and `T` is the total points available.
 
-## Non-standard tests
-
-Non-standard tests fall into two categories: custom tests, which involve checks of the submission beyond simply calling the predicate defined in the question, and bonus and penalty tests, which award points in different ways.
-
-There are currently no non-standard tests in this project.
-
-### Custom tests
-
-In some cases, we wish to test highly specific parts of a submission, such as efficiency or implementation details which would not effect the actual solutions generated. In these cases, we make a query to a custom Prolog predicate written to test this detail. These predicates always return a boolean result and so are always binary pass/fail. They may be worth standard points, bonus points, or penalty points as described below.
-
-### Bonus tests
-
-Some test cases are designed to test behaviour that goes above and beyond the base level asked for in the specification. In these cases, the tests award bonus points, which do not count towards the total number of points for that question. This allows students to receive more than 100% of the marks for a given question, potentially offsetting lost marks elsewhere in the project.
-
-This is indicated in the marking report by lines such as:
-
-```
-Test N: [P/T] - Final points collected (BONUS)
-```
-where `N` is the ID of the test case, `P` is the number of points received by the submission, and `T` is the total points available.
-
-### Penalty tests
-
-Occasionally there are attributes of a submission which are more easily tested in a negative way; for example, a search algorithm which returns a solution in a graph that has no valid path to the goal is fundamentally flawed regardless of how it performs on graphs with valid solutions. Penalty tests allow us to target these properties in a precise and fair way. These will often, but not always, be custom tests.
-
-Penalty tests act in a similar way to soundness, i.e. they reduce the points obtained by a fixed percentage of the total. The difference is, they operate at the question level, rather than the test case level. For example, a custom penalty test case which checks for efficiency might (if failed) reduce the total points you get for that entire question by 20%. This ensures that an otherwise perfect submission which is inefficient is never eligible for an HD, but a half working submission which is inefficient is not overly penalised.
-
-This is indicated in the marking report by lines such as:
-
-```
-Test N: [0.00] - Correct answer! :-)
-Test N: [0%/-20%] - Final points collected
-```
-or
-```
-Test N: [-0.20] - Incorrect answer (wrong bool answer)
-Test N: [-20%/-20%] - Final points collected
-```
-Where the presence of the percentage sign indicates that this is a penalty applied to the whole question.
 
 ## Report
 
