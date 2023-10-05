@@ -78,7 +78,7 @@ or simply:
 
 ```shell
 $ swipl agt_city.pl
-ERROR: /mnt/ssardina-volume/cosc1125-1127-AI/AI23/p3-prolog/submissions/ms-hacker404/agt_city.pl:146:35: Syntax error: Unexpected end of file
+ERROR: /mnt/ssardina-volume/cosc1125-1127-AI/AI23/p3-prolog/submissions/bad/agt_city.pl:146:35: Syntax error: Unexpected end of file
 Welcome to SWI-Prolog (threaded, 64 bits, version 8.4.2)
 SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
 Please run ?- license. for legal details.
