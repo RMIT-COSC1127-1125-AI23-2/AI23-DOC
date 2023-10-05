@@ -10,6 +10,7 @@ In order to understand the output from the automarker, there are two distinct co
 The automarker will produce a YAML file describing the outcome of each single test in each test set. See below for an example of a part of such YAML file.
 
 - [Marking Guide for AI'23 - Project 3 - Agents in City (Prolog)](#marking-guide-for-ai23---project-3---agents-in-city-prolog)
+  - [Consult error-free](#consult-error-free)
   - [Test cases](#test-cases)
   - [Grading dimensions](#grading-dimensions)
     - [Completeness](#completeness)
@@ -17,6 +18,80 @@ The automarker will produce a YAML file describing the outcome of each single te
     - [Soundness](#soundness)
   - [Overall score/marks](#overall-scoremarks)
   - [Report](#report)
+
+## Consult error-free
+
+Of course the very first and most basic requirement to get any marks is that your codebase compiles error free, so that the automarker can load it up as a library in full:
+
+```
+* Your code **must consult and run _error-free_ on [SWI-Prolog](https://www.swi-prolog.org/)**. Staff will not debug/fix any code.
+```
+
+This is super easy to check, you just consult your solution file and it should report NO error whatsoever:
+
+```shell
+$ swipl
+Welcome to SWI-Prolog (threaded, 64 bits, version 8.4.2)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- ['agt_city.pl'].
+true.
+```
+
+An alternative way is to consult your file when starting SWI:
+
+```shell
+$ swipl agt_city.pl
+Welcome to SWI-Prolog (threaded, 64 bits, version 8.4.2)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?-
+```
+
+The above cases report no error, so file `agt_city.pl` have been consulted (i.e., loaded) successfully.
+
+In contrast, here is an example of a file that is _not_ error free:
+
+```shell
+$ swipl
+Welcome to SWI-Prolog (threaded, 64 bits, version 8.4.2)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- ['agt_city.pl'].
+ERROR: /mnt/ssardina-volume/cosc1125-1127-AI/AI23/p3-prolog/submissions/bad/agt_city.pl:146:35: Syntax error: Unexpected end of file
+true.
+```
+
+or simply:
+
+```shell
+$ swipl agt_city.pl
+ERROR: /mnt/ssardina-volume/cosc1125-1127-AI/AI23/p3-prolog/submissions/ms-hacker404/agt_city.pl:146:35: Syntax error: Unexpected end of file
+Welcome to SWI-Prolog (threaded, 64 bits, version 8.4.2)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?-
+```
+
+One can see in the above cases that the file has syntax problems in line 164 and hence it yields ERROR. A file like this will not be marked and will attract zero marks, as per spec.
+
+Note that interactive SWI and unit testing framework will still load the file _partially_ and reporting the error, so as to help in the debugging. But ultimately the codebase has to be error-free.
 
 ## Test cases
 
