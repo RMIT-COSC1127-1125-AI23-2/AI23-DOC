@@ -89,9 +89,13 @@ For built-in help, use ?- help(Topic). or ?- apropos(Word).
 ?-
 ```
 
-One can see in the above cases that the file has syntax problems in line 164 and hence it yields ERROR. A file like this will not be marked and will attract zero marks, as per spec.
+One can see in the above cases that the file has syntax problems in line 164 and hence it yields ERROR. A file like this will not be marked and will attract zero marks, as per spec. When this happens the report will signal it with the following feedback:
 
-Note that interactive SWI and unit testing framework will still load the file _partially_ and reporting the error, so as to help in the debugging. But ultimately the codebase has to be error-free.
+```
+- 'Solution file consulted with error (this should never happen): syntax_error(end_of_file)'
+```
+
+(Note that interactive SWI and unit testing framework will still load the file _partially_ and reporting the error, so as to help in the debugging. But ultimately the codebase has to be error-free.)
 
 ## Test cases
 
