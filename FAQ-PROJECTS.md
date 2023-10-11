@@ -73,14 +73,16 @@ As any FAQ page, this page is always "under construction". As we realize that so
   - [What is a reasonable time for Question 5?](#what-is-a-reasonable-time-for-question-5)
   - [Is there a way to run the evaluation function in Question 5 in harder setting or with more ghosts?](#is-there-a-way-to-run-the-evaluation-function-in-question-5-in-harder-setting-or-with-more-ghosts)
 - [Project 3](#project-3)
-    - [What is "vanilla" Prolog?](#what-is-vanilla-prolog)
+  - [What is "vanilla" Prolog?](#what-is-vanilla-prolog)
   - [Can I use predicate `X`?](#can-i-use-predicate-x)
   - [Why there are restrictions on the language used?](#why-there-are-restrictions-on-the-language-used)
   - [Prolog only shows me part of the terms, the rest shows as `...`. Can I make it to print all the answer?](#prolog-only-shows-me-part-of-the-terms-the-rest-shows-as--can-i-make-it-to-print-all-the-answer)
 - [Project 4](#project-4)
-    - [What are the frequency counts in Q-learning?](#what-are-the-frequency-counts-in-q-learning)
-    - [How precisely does noise effect the transition probabilities in Q2 and Q3?](#how-precisely-does-noise-effect-the-transition-probabilities-in-q2-and-q3)
-    - [What is 'living reward' in Q3?](#what-is-living-reward-in-q3)
+  - [What are the frequency counts in Q-learning?](#what-are-the-frequency-counts-in-q-learning)
+  - [How precisely does noise effect the transition probabilities in Q2 and Q3?](#how-precisely-does-noise-effect-the-transition-probabilities-in-q2-and-q3)
+  - [What is 'living reward' in Q3?](#what-is-living-reward-in-q3)
+- [Project 5 - Ghostbusters I](#project-5---ghostbusters-i)
+    - [Q2 says that factors is a _list_, but seems it is a `dict_values` object; can I convert it to a list?](#q2-says-that-factors-is-a-list-but-seems-it-is-a-dict_values-object-can-i-convert-it-to-a-list)
 -------------------------
 
 # GENERAL
@@ -980,3 +982,21 @@ The spec says "Noise refers to how often an agent ends up in an unintended succe
 
 ## What is 'living reward' in Q3?
 The living reward parameter is briefly explained at the end of the MDPs section of the spec above Question 1. It is the reward given to the agent for 'staying alive' that is a reward given at every step where the agent does not reach a terminal state.
+
+# Project 5 - Ghostbusters I
+
+### Q2 says that factors is a _list_, but seems it is a `dict_values` object; can I convert it to a list?
+
+This may be a change from Python 2 to 3 :-)
+
+Converting it into a list should be safe, but maybe it is safer to avoid doing so. If you feel you must convert it, make sure you test thoroughly and I don't make any guarantees it won't break!
+
+Said so, you can iterate through it as if it was a list, for example the following code does what you would expect:
+
+```python
+for factor in factors:
+    print(factor)
+```
+
+You just can't index into it: `factors[0]` will return an error.
+
