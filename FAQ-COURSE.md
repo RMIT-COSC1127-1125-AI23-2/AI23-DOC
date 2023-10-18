@@ -44,6 +44,7 @@ For specific FAQ on PACMAN see [here](../AI23-DOC.git/FAQ-PACMAN.md).
   - [Why is THE/EC are not fully done on paper or done online at home?](#why-is-theec-are-not-fully-done-on-paper-or-done-online-at-home)
   - [In a code assignment/project, how do I make sure I do not go against academic integrity?](#in-a-code-assignmentproject-how-do-i-make-sure-i-do-not-go-against-academic-integrity)
   - [Why did I get 57 in the assignment/project if it is 5% of the course?](#why-did-i-get-57-in-the-assignmentproject-if-it-is-5-of-the-course)
+  - [How do I prepare for the final in-person assessment (THE/EC)?](#how-do-i-prepare-for-the-final-in-person-assessment-theec)
 
 # GENERAL
 
@@ -411,3 +412,49 @@ The reason is that doing so provides a **uniform and consistent view of the stud
 To get the final contribution to your course, you then need to _multiply the mark of the assessment by the weight of the assessment_. For example, if you got a 50 in Assignment 1, say, and the assessment was 5% of the course, this means that you have collected 2.5% of that assessment for the course.
 
 BTW, this is just one way of doing it and I am not claiming it must be done like that. This is not really so important in the end, and any student should be able to go from one system (out of 100 or out of the weight contribution) with ease.
+
+## How do I prepare for the final in-person assessment (THE/EC)?
+
+Final assessments are often summative, in that they try to assess the knowledge and skill levels _at the end_ of the learning process and as a whole. While one may have superficial or not yet fully connected knowledge half way the semester, one would expect a more cohesive and deeper level at the end of the course.
+
+Doing well in a final assessment requires consistent _quality_ study during the semester as well as good preparation before it.
+
+_Now what does "quality" study mean?_
+
+First of all, we recognise that each student may have their own best practices, and we do not all learn the same way. However, there are some general strategies and good practices that should apply to almost everyone (well, geniuses may do without them...)
+
+Andrew, our most experienced tutor for the course, suggested to go over every question in tutes and semester assessment three times:
+
+1. First, try to do them as if you were in the assessment - only look at your one page of notes, and move on quickly if you get stuck. This gives you a good understanding of how you will actually perform in the actual assessment. This stage is great to practice and memorise, but does not necessarily help you learn new things.
+2. Second, for any question you didn't answer in the first pass, come back and take more time, look up the book for help, etc. This is where a lot of learning should happen - if there are concepts that you aren't sure of, then this is where you try to figure them out.
+3. Finally, go back through all the questions while looking at the answers. For any that you got wrong, make sure you understand WHY you got them wrong, and once you do repeat this process all over again from step 1, to make sure that you have internalised that mistake. This phase is where you get critical feedback to make sure you are on the right track.
+
+I will add a fourth step:
+
+4. At least for any question that you required steps 2 and 3, repeat the process later on, maybe tomorrow or later in the day.
+
+Speed is as important as accuracy. If you are able to do the exercises but it is during pass 2 described above, this is probably not good enough (yet)!
+
+Also, make sure you are never solving a problem "from memory". You should be able to explain all the steps you are doing in your process. Imagine you are a tutor and you need to explain: _why this step? why that step?_
+
+Regarding the page of notes, cheatsheet. You should ideally have a well thought out page of notes which is organised clearly and contains the most important information in the course. **You should also ideally never look at it during the final assessment**. The goal is that the process of making the sheet helps you to learn the material, and so by the time you are finished making it you don't need it any more. If you check it a couple of times, that is not a problem, but if the first thing you do in the final assessment is to search your notes for a clue, you will likely run out of time: you are not sharp enough.
+
+Now, putting time is a _necessary_ condition for quality study, but not a _sufficient_ one. In logical terms, if your study is of quality, then you would have have put hours of work (necessary). However, it is not _sufficient_ to put significant number of hours: they need to be quality hours. Remember that assessments are not judging amount of work invested, but the outcome of that result. Of course one would expect a correlation between amount of work invested and outcome, but only when that time was well invested.
+
+So, the two main issues I have seen repetitively that amount to poor quality study time are:
+
+1. Study under continuous distraction (e.g., tv, whatsapp, discord, youtube, etc..).
+2. Excessive reliance on external help/support, that is, very often (if not always) having to check solutions (or videos). This signals inability to solve a problem from first principle _by oneself_, without relying on external help.
+   * One actually knows the content once one can execute and solve problems "alone".
+   * Being able to understand how others solve the problem is a first initial step, but definitively does not imply good level of understanding and skills.
+   * It is always fairly easy to recognise a good play or move from a sport player; or a good piece of art from an artist. It is a very different thing to be able to do the play or generate art. :-)
+   * And for those who took Computing Theory, remember the NP class: it is easy to _check_ a solution, but much much harder to _build_ it.
+
+
+Finally, check this great guidance on how to do effective study, from Coursera:
+
+https://www.coursera.org/articles/study-habits
+
+You will recognise that several tips overalp with what was discussed above and suggest that besides putting time, one has to do it well, with quality.
+
+All the best & hope this helps!!
