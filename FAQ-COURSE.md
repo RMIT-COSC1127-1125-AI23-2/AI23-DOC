@@ -134,9 +134,7 @@ More articles on Course Surveys and Grade Inflation:
 
 - [‘A’ Is for Average: College Grade Inflation](http://tinyurl.com/h2d88cy)
 - [The New Normal: The Problem of Grade Inflation in American Schools](https://drive.google.com/file/d/1Z1vjzcpsA3n0m3_A6NtRYwxMid1afT9b/view?usp=sharing)
-- [Students don't know what's best for their own learning](http://tinyurl.com/o6v6xhz)
 - [When A is for Average: the High Cost of Grade Inflation](http://tinyurl.com/oc2ewhl) – Tutor Talk.
-- [College Grade Inflation](http://tinyurl.com/lvx4lr4)
 
 Finally, if you are interested in education in general, and university and university in Australia, this podcast in ABC Big Ideas is a must:
 
